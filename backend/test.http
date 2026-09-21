@@ -1,0 +1,17 @@
+POST http://localhost:8080/api/elements
+Content-Type: application/json
+
+{
+  "type": "text",
+  "x": 250,
+  "y": 150,
+  "width": 200,
+  "height": 50,
+  "text": "Hello World",
+  "fontSize": 32,
+  "fontFamily": "Arial",
+  "color": "#000000",
+  "backgroundColor": "#ffffff",
+  "fontWeight": "normal",
+  "fontStyle": "normal"
+}
