@@ -1,14 +1,13 @@
 package com.themebuilder.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "design_element")
-public class DesignElement {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class DesignElement extends BaseEntity {
 
     private String type;
 
@@ -18,12 +17,13 @@ public class DesignElement {
     private double width;
     private double height;
 
-    private double scaleX;
-    private double scaleY;
+    private double scaleX = 1.0;
+    private double scaleY = 1.0;
 
     private double angle;
-    private double opacity;
+    private double opacity = 1.0;
 
+    @Column(columnDefinition = "TEXT")
     private String text;
 
     private Integer fontSize;
@@ -32,58 +32,33 @@ public class DesignElement {
     private String color;
     private String backgroundColor;
 
-    public double getScaleX() {
-        return scaleX;
-    }
-
-    public double getAngle() {
-        return angle;
-    }
-
-    public void setAngle(double angle) {
-        this.angle = angle;
-    }
-
-    public void setScaleX(double scaleX) {
-        this.scaleX = scaleX;
-    }
-
     private String fontWeight;
     private String fontStyle;
 
+    @Column(columnDefinition = "TEXT")
     private String src;
 
-    public String getSrc() {
-        return src;
-    }
+    private Double lineHeight;
+    private Double charSpacing;
+    private String textAlign;
 
-    public void setSrc(String src) {
-        this.src = src;
-    }
+    private String strokeColor;
+    private Double strokeWidth;
 
-    public double getOpacity() {
-        return opacity;
-    }
+    @ElementCollection
+    private List<Integer> lineDash;
 
-    public void setOpacity(double opacity) {
-        this.opacity = opacity;
-    }
+    private Integer shapeSides;
 
-    public double getScaleY() {
-        return scaleY;
-    }
+    @ManyToOne
+    @JoinColumn(name = "design_id")
+    @JsonIgnore
+    private Design design;
 
-    public void setScaleY(double scaleY) {
-        this.scaleY = scaleY;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @ManyToOne
+    @JoinColumn(name = "template_id")
+    @JsonIgnore
+    private Template template;
 
     public String getType() {
         return type;
@@ -123,6 +98,38 @@ public class DesignElement {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    public double getScaleX() {
+        return scaleX;
+    }
+
+    public void setScaleX(double scaleX) {
+        this.scaleX = scaleX;
+    }
+
+    public double getScaleY() {
+        return scaleY;
+    }
+
+    public void setScaleY(double scaleY) {
+        this.scaleY = scaleY;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+    public double getOpacity() {
+        return opacity;
+    }
+
+    public void setOpacity(double opacity) {
+        this.opacity = opacity;
     }
 
     public String getText() {
@@ -179,5 +186,85 @@ public class DesignElement {
 
     public void setFontStyle(String fontStyle) {
         this.fontStyle = fontStyle;
+    }
+
+    public String getSrc() {
+        return src;
+    }
+
+    public void setSrc(String src) {
+        this.src = src;
+    }
+
+    public Double getLineHeight() {
+        return lineHeight;
+    }
+
+    public void setLineHeight(Double lineHeight) {
+        this.lineHeight = lineHeight;
+    }
+
+    public Double getCharSpacing() {
+        return charSpacing;
+    }
+
+    public void setCharSpacing(Double charSpacing) {
+        this.charSpacing = charSpacing;
+    }
+
+    public String getTextAlign() {
+        return textAlign;
+    }
+
+    public void setTextAlign(String textAlign) {
+        this.textAlign = textAlign;
+    }
+
+    public String getStrokeColor() {
+        return strokeColor;
+    }
+
+    public void setStrokeColor(String strokeColor) {
+        this.strokeColor = strokeColor;
+    }
+
+    public Double getStrokeWidth() {
+        return strokeWidth;
+    }
+
+    public void setStrokeWidth(Double strokeWidth) {
+        this.strokeWidth = strokeWidth;
+    }
+
+    public List<Integer> getLineDash() {
+        return lineDash;
+    }
+
+    public void setLineDash(List<Integer> lineDash) {
+        this.lineDash = lineDash;
+    }
+
+    public Integer getShapeSides() {
+        return shapeSides;
+    }
+
+    public void setShapeSides(Integer shapeSides) {
+        this.shapeSides = shapeSides;
+    }
+
+    public Design getDesign() {
+        return design;
+    }
+
+    public void setDesign(Design design) {
+        this.design = design;
+    }
+
+    public Template getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(Template template) {
+        this.template = template;
     }
 }

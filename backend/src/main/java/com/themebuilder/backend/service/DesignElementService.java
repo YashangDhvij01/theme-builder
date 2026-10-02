@@ -4,6 +4,7 @@ import com.themebuilder.backend.entity.DesignElement;
 import com.themebuilder.backend.repository.DesignElementRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -16,6 +17,12 @@ public class DesignElementService {
     }
 
     public DesignElement createElement(DesignElement element) {
+
+        LocalDateTime now = LocalDateTime.now();
+
+        element.setCreatedAt(now);
+        element.setUpdatedAt(now);
+
         return designElementRepository.save(element);
     }
 
@@ -33,6 +40,10 @@ public class DesignElementService {
         existingElement.setY(element.getY());
         existingElement.setWidth(element.getWidth());
         existingElement.setHeight(element.getHeight());
+        existingElement.setScaleX(element.getScaleX());
+        existingElement.setScaleY(element.getScaleY());
+        existingElement.setAngle(element.getAngle());
+        existingElement.setOpacity(element.getOpacity());
         existingElement.setText(element.getText());
         existingElement.setFontSize(element.getFontSize());
         existingElement.setFontFamily(element.getFontFamily());
@@ -40,6 +51,16 @@ public class DesignElementService {
         existingElement.setBackgroundColor(element.getBackgroundColor());
         existingElement.setFontWeight(element.getFontWeight());
         existingElement.setFontStyle(element.getFontStyle());
+        existingElement.setSrc(element.getSrc());
+        existingElement.setLineHeight(element.getLineHeight());
+        existingElement.setCharSpacing(element.getCharSpacing());
+        existingElement.setTextAlign(element.getTextAlign());
+        existingElement.setStrokeColor(element.getStrokeColor());
+        existingElement.setStrokeWidth(element.getStrokeWidth());
+        existingElement.setLineDash(element.getLineDash());
+        existingElement.setShapeSides(element.getShapeSides());
+
+        existingElement.setUpdatedAt(LocalDateTime.now());
 
         return designElementRepository.save(existingElement);
     }
