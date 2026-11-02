@@ -1,18 +1,21 @@
+
 package com.themebuilder.backend.entity;
 
 import jakarta.persistence.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "design")
+
 public class Design extends BaseEntity {
 
     private String name;
 
     private String backgroundColor;
-
+@Autowired
     @OneToMany(
             mappedBy = "design",
             cascade = CascadeType.ALL,
