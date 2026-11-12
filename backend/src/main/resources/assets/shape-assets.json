@@ -1,0 +1,730 @@
+{
+  "assets": [
+    {
+      "assetKey": "rectangle",
+      "name": "Rectangle",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "rectangle",
+        "iconKey": "square"
+      },
+      "sortOrder": 36
+    },
+    {
+      "assetKey": "square",
+      "name": "Square",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "square",
+        "iconKey": "square"
+      },
+      "sortOrder": 37
+    },
+    {
+      "assetKey": "circle",
+      "name": "Circle",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "circle",
+        "iconKey": "circle"
+      },
+      "sortOrder": 38
+    },
+    {
+      "assetKey": "triangle",
+      "name": "Triangle",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "triangle",
+        "iconKey": "triangle"
+      },
+      "sortOrder": 39
+    },
+    {
+      "assetKey": "polygon",
+      "name": "Polygon",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "polygon",
+        "iconKey": "pentagon"
+      },
+      "sortOrder": 40
+    },
+    {
+      "assetKey": "pentagon",
+      "name": "Pentagon",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "pentagon",
+        "iconKey": "pentagon"
+      },
+      "sortOrder": 41
+    },
+    {
+      "assetKey": "hexagon",
+      "name": "Hexagon",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "hexagon",
+        "iconKey": "hexagon"
+      },
+      "sortOrder": 42
+    },
+    {
+      "assetKey": "heptagon",
+      "name": "Heptagon",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "heptagon",
+        "iconKey": "hexagon"
+      },
+      "sortOrder": 43
+    },
+    {
+      "assetKey": "octagon",
+      "name": "Octagon",
+      "assetType": "SHAPE",
+      "category": "Basic Shapes",
+      "assetData": {
+        "type": "octagon",
+        "iconKey": "octagon"
+      },
+      "sortOrder": 44
+    },
+    {
+      "assetKey": "star",
+      "name": "Star",
+      "assetType": "SHAPE",
+      "category": "Stars",
+      "assetData": {
+        "type": "star",
+        "iconKey": "star"
+      },
+      "sortOrder": 45
+    },
+    {
+      "assetKey": "star-outline",
+      "name": "Star Outline",
+      "assetType": "SHAPE",
+      "category": "Stars",
+      "assetData": {
+        "type": "star-outline",
+        "iconKey": "star"
+      },
+      "sortOrder": 46
+    },
+    {
+      "assetKey": "star-4",
+      "name": "4 Point Star",
+      "assetType": "SHAPE",
+      "category": "Stars",
+      "assetData": {
+        "type": "star-4",
+        "iconKey": "asterisk"
+      },
+      "sortOrder": 47
+    },
+    {
+      "assetKey": "star-6",
+      "name": "6 Point Star",
+      "assetType": "SHAPE",
+      "category": "Stars",
+      "assetData": {
+        "type": "star-6",
+        "iconKey": "star"
+      },
+      "sortOrder": 48
+    },
+    {
+      "assetKey": "star-8",
+      "name": "8 Point Star",
+      "assetType": "SHAPE",
+      "category": "Stars",
+      "assetData": {
+        "type": "star-8",
+        "iconKey": "sparkles"
+      },
+      "sortOrder": 49
+    },
+    {
+      "assetKey": "star-12",
+      "name": "12 Point Star",
+      "assetType": "SHAPE",
+      "category": "Stars",
+      "assetData": {
+        "type": "star-12",
+        "iconKey": "sparkles"
+      },
+      "sortOrder": 50
+    },
+    {
+      "assetKey": "cog-4",
+      "name": "4 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-4",
+        "iconKey": "settings"
+      },
+      "sortOrder": 51
+    },
+    {
+      "assetKey": "cog-6",
+      "name": "6 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-6",
+        "iconKey": "settings"
+      },
+      "sortOrder": 52
+    },
+    {
+      "assetKey": "cog-8",
+      "name": "8 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-8",
+        "iconKey": "settings"
+      },
+      "sortOrder": 53
+    },
+    {
+      "assetKey": "cog-10",
+      "name": "10 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-10",
+        "iconKey": "settings"
+      },
+      "sortOrder": 54
+    },
+    {
+      "assetKey": "cog-12",
+      "name": "12 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-12",
+        "iconKey": "settings"
+      },
+      "sortOrder": 55
+    },
+    {
+      "assetKey": "cog-16",
+      "name": "16 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-16",
+        "iconKey": "settings"
+      },
+      "sortOrder": 56
+    },
+    {
+      "assetKey": "cog-20",
+      "name": "20 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-20",
+        "iconKey": "settings"
+      },
+      "sortOrder": 57
+    },
+    {
+      "assetKey": "cog-24",
+      "name": "24 Tooth Cog",
+      "assetType": "SHAPE",
+      "category": "Cogs",
+      "assetData": {
+        "type": "cog-24",
+        "iconKey": "settings"
+      },
+      "sortOrder": 58
+    },
+    {
+      "assetKey": "square-star-4",
+      "name": "4 Point Square Star",
+      "assetType": "SHAPE",
+      "category": "Square Stars",
+      "assetData": {
+        "type": "square-star-4",
+        "iconKey": "star"
+      },
+      "sortOrder": 59
+    },
+    {
+      "assetKey": "square-star-8",
+      "name": "8 Point Square Star",
+      "assetType": "SHAPE",
+      "category": "Square Stars",
+      "assetData": {
+        "type": "square-star-8",
+        "iconKey": "star"
+      },
+      "sortOrder": 60
+    },
+    {
+      "assetKey": "square-star-12",
+      "name": "12 Point Square Star",
+      "assetType": "SHAPE",
+      "category": "Square Stars",
+      "assetData": {
+        "type": "square-star-12",
+        "iconKey": "star"
+      },
+      "sortOrder": 61
+    },
+    {
+      "assetKey": "square-star-16",
+      "name": "16 Point Square Star",
+      "assetType": "SHAPE",
+      "category": "Square Stars",
+      "assetData": {
+        "type": "square-star-16",
+        "iconKey": "star"
+      },
+      "sortOrder": 62
+    },
+    {
+      "assetKey": "square-star-24",
+      "name": "24 Point Square Star",
+      "assetType": "SHAPE",
+      "category": "Square Stars",
+      "assetData": {
+        "type": "square-star-24",
+        "iconKey": "star"
+      },
+      "sortOrder": 63
+    },
+    {
+      "assetKey": "square-star-32",
+      "name": "32 Point Square Star",
+      "assetType": "SHAPE",
+      "category": "Square Stars",
+      "assetData": {
+        "type": "square-star-32",
+        "iconKey": "star"
+      },
+      "sortOrder": 64
+    },
+    {
+      "assetKey": "organic-blob",
+      "name": "Organic Blob",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-blob",
+        "iconKey": "shapes"
+      },
+      "sortOrder": 65
+    },
+    {
+      "assetKey": "organic-blob-2",
+      "name": "Organic Blob 2",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-blob-2",
+        "iconKey": "shapes"
+      },
+      "sortOrder": 66
+    },
+    {
+      "assetKey": "organic-blob-3",
+      "name": "Organic Blob 3",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-blob-3",
+        "iconKey": "shapes"
+      },
+      "sortOrder": 67
+    },
+    {
+      "assetKey": "organic-wave",
+      "name": "Organic Wave",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-wave",
+        "iconKey": "waves"
+      },
+      "sortOrder": 68
+    },
+    {
+      "assetKey": "organic-wave-2",
+      "name": "Organic Wave 2",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-wave-2",
+        "iconKey": "waves"
+      },
+      "sortOrder": 69
+    },
+    {
+      "assetKey": "organic-cloud",
+      "name": "Organic Cloud",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-cloud",
+        "iconKey": "cloud"
+      },
+      "sortOrder": 70
+    },
+    {
+      "assetKey": "organic-splash",
+      "name": "Organic Splash",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-splash",
+        "iconKey": "droplets"
+      },
+      "sortOrder": 71
+    },
+    {
+      "assetKey": "organic-pebble",
+      "name": "Organic Pebble",
+      "assetType": "SHAPE",
+      "category": "Organic Shapes",
+      "assetData": {
+        "type": "organic-pebble",
+        "iconKey": "circle"
+      },
+      "sortOrder": 72
+    },
+    {
+      "assetKey": "flower",
+      "name": "Flower",
+      "assetType": "SHAPE",
+      "category": "Flowers",
+      "assetData": {
+        "type": "flower",
+        "iconKey": "flower"
+      },
+      "sortOrder": 73
+    },
+    {
+      "assetKey": "flower-5-petal",
+      "name": "5 Petal Flower",
+      "assetType": "SHAPE",
+      "category": "Flowers",
+      "assetData": {
+        "type": "flower-5-petal",
+        "iconKey": "flower"
+      },
+      "sortOrder": 74
+    },
+    {
+      "assetKey": "flower-8-petal",
+      "name": "8 Petal Flower",
+      "assetType": "SHAPE",
+      "category": "Flowers",
+      "assetData": {
+        "type": "flower-8-petal",
+        "iconKey": "flower"
+      },
+      "sortOrder": 75
+    },
+    {
+      "assetKey": "flower-12-petal",
+      "name": "12 Petal Flower",
+      "assetType": "SHAPE",
+      "category": "Flowers",
+      "assetData": {
+        "type": "flower-12-petal",
+        "iconKey": "flower"
+      },
+      "sortOrder": 76
+    },
+    {
+      "assetKey": "leaf",
+      "name": "Leaf",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "leaf",
+        "iconKey": "leaf"
+      },
+      "sortOrder": 77
+    },
+    {
+      "assetKey": "leaf-rounded",
+      "name": "Rounded Leaf",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "leaf-rounded",
+        "iconKey": "leaf"
+      },
+      "sortOrder": 78
+    },
+    {
+      "assetKey": "leaf-pointed",
+      "name": "Pointed Leaf",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "leaf-pointed",
+        "iconKey": "leaf"
+      },
+      "sortOrder": 79
+    },
+    {
+      "assetKey": "leaf-pair",
+      "name": "Leaf Pair",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "leaf-pair",
+        "iconKey": "leaf"
+      },
+      "sortOrder": 80
+    },
+    {
+      "assetKey": "petal",
+      "name": "Petal",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "petal",
+        "iconKey": "flower"
+      },
+      "sortOrder": 81
+    },
+    {
+      "assetKey": "petal-rounded",
+      "name": "Rounded Petal",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "petal-rounded",
+        "iconKey": "flower"
+      },
+      "sortOrder": 82
+    },
+    {
+      "assetKey": "petal-pointed",
+      "name": "Pointed Petal",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "petal-pointed",
+        "iconKey": "flower"
+      },
+      "sortOrder": 83
+    },
+    {
+      "assetKey": "vine",
+      "name": "Vine",
+      "assetType": "SHAPE",
+      "category": "Leaves & Petals",
+      "assetData": {
+        "type": "vine",
+        "iconKey": "sprout"
+      },
+      "sortOrder": 84
+    },
+    {
+      "assetKey": "flow-process",
+      "name": "Process",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-process",
+        "iconKey": "rectangle-horizontal"
+      },
+      "sortOrder": 85
+    },
+    {
+      "assetKey": "flow-decision",
+      "name": "Decision",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-decision",
+        "iconKey": "diamond"
+      },
+      "sortOrder": 86
+    },
+    {
+      "assetKey": "flow-terminator",
+      "name": "Terminator",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-terminator",
+        "iconKey": "circle"
+      },
+      "sortOrder": 87
+    },
+    {
+      "assetKey": "flow-io",
+      "name": "Input Output",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-io",
+        "iconKey": "arrow-left-right"
+      },
+      "sortOrder": 88
+    },
+    {
+      "assetKey": "flow-document",
+      "name": "Document",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-document",
+        "iconKey": "file-text"
+      },
+      "sortOrder": 89
+    },
+    {
+      "assetKey": "flow-connector",
+      "name": "Connector",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-connector",
+        "iconKey": "circle"
+      },
+      "sortOrder": 90
+    },
+    {
+      "assetKey": "flow-preparation",
+      "name": "Preparation",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-preparation",
+        "iconKey": "hexagon"
+      },
+      "sortOrder": 91
+    },
+    {
+      "assetKey": "flow-manual-input",
+      "name": "Manual Input",
+      "assetType": "SHAPE",
+      "category": "Flowchart",
+      "assetData": {
+        "type": "flow-manual-input",
+        "iconKey": "corner-down-left"
+      },
+      "sortOrder": 92
+    },
+    {
+      "assetKey": "speech-bubble",
+      "name": "Speech Bubble",
+      "assetType": "SHAPE",
+      "category": "Speech Bubbles",
+      "assetData": {
+        "type": "speech-bubble",
+        "iconKey": "message-circle"
+      },
+      "sortOrder": 93
+    },
+    {
+      "assetKey": "chat-bubble",
+      "name": "Chat Bubble",
+      "assetType": "SHAPE",
+      "category": "Speech Bubbles",
+      "assetData": {
+        "type": "chat-bubble",
+        "iconKey": "message-square"
+      },
+      "sortOrder": 94
+    },
+    {
+      "assetKey": "thought-bubble",
+      "name": "Thought Bubble",
+      "assetType": "SHAPE",
+      "category": "Speech Bubbles",
+      "assetData": {
+        "type": "thought-bubble",
+        "iconKey": "cloud"
+      },
+      "sortOrder": 95
+    },
+    {
+      "assetKey": "rounded-bubble",
+      "name": "Rounded Bubble",
+      "assetType": "SHAPE",
+      "category": "Speech Bubbles",
+      "assetData": {
+        "type": "rounded-bubble",
+        "iconKey": "message-circle"
+      },
+      "sortOrder": 96
+    },
+    {
+      "assetKey": "line",
+      "name": "Line",
+      "assetType": "SHAPE",
+      "category": "Lines & Arrows",
+      "assetData": {
+        "type": "line",
+        "iconKey": "minus"
+      },
+      "sortOrder": 97
+    },
+    {
+      "assetKey": "arrow",
+      "name": "Arrow",
+      "assetType": "SHAPE",
+      "category": "Lines & Arrows",
+      "assetData": {
+        "type": "arrow",
+        "iconKey": "arrow-right"
+      },
+      "sortOrder": 98
+    },
+    {
+      "assetKey": "double-arrow",
+      "name": "Double Arrow",
+      "assetType": "SHAPE",
+      "category": "Lines & Arrows",
+      "assetData": {
+        "type": "double-arrow",
+        "iconKey": "arrow-left-right"
+      },
+      "sortOrder": 99
+    },
+    {
+      "assetKey": "dashed-line",
+      "name": "Dashed Line",
+      "assetType": "SHAPE",
+      "category": "Lines & Arrows",
+      "assetData": {
+        "type": "dashed-line",
+        "iconKey": "ellipsis"
+      },
+      "sortOrder": 100
+    },
+    {
+      "assetKey": "dotted-line",
+      "name": "Dotted Line",
+      "assetType": "SHAPE",
+      "category": "Lines & Arrows",
+      "assetData": {
+        "type": "dotted-line",
+        "iconKey": "grip-horizontal"
+      },
+      "sortOrder": 101
+    }
+  ]
+}

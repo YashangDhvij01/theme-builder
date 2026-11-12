@@ -1,0 +1,835 @@
+{
+  "assets": [
+    {
+      "assetKey": "golden-hour",
+      "name": "Golden Hour",
+      "assetType": "TEXT",
+      "category": "Elegant",
+      "assetData": {
+        "styles": [
+          {
+            "text": "GOLDEN",
+            "fontSize": 38,
+            "fontFamily": "Georgia",
+            "fill": "#C49A32",
+            "fontWeight": "bold",
+            "charSpacing": 90
+          },
+          {
+            "text": "HOUR",
+            "fontSize": 34,
+            "fontFamily": "Georgia",
+            "fill": "#C49A32",
+            "charSpacing": 110
+          }
+        ]
+      },
+      "sortOrder": 1
+    },
+    {
+      "assetKey": "royal-classic",
+      "name": "Royal Classic",
+      "assetType": "TEXT",
+      "category": "Elegant",
+      "assetData": {
+        "styles": [
+          {
+            "text": "ROYAL",
+            "fontSize": 42,
+            "fontFamily": "Cinzel, Georgia",
+            "fill": "#9B762D",
+            "charSpacing": 100
+          },
+          {
+            "text": "CERTIFICATE",
+            "fontSize": 17,
+            "fontFamily": "Georgia",
+            "fill": "#55452B",
+            "charSpacing": 180
+          }
+        ]
+      },
+      "sortOrder": 2
+    },
+    {
+      "assetKey": "the-elegance",
+      "name": "The Elegance",
+      "assetType": "TEXT",
+      "category": "Elegant",
+      "assetData": {
+        "styles": [
+          {
+            "text": "The Elegance",
+            "fontSize": 42,
+            "fontFamily": "Great Vibes, cursive",
+            "fill": "#8B6A35"
+          },
+          {
+            "text": "TIMELESS BEAUTY",
+            "fontSize": 14,
+            "fontFamily": "Arial",
+            "fill": "#6B6255",
+            "charSpacing": 140
+          }
+        ]
+      },
+      "sortOrder": 3
+    },
+    {
+      "assetKey": "luxury",
+      "name": "Luxury",
+      "assetType": "TEXT",
+      "category": "Elegant",
+      "assetData": {
+        "styles": [
+          {
+            "text": "LUXURY",
+            "fontSize": 43,
+            "fontFamily": "Georgia",
+            "fill": "#B08D57",
+            "charSpacing": 150
+          },
+          {
+            "text": "COLLECTION",
+            "fontSize": 15,
+            "fontFamily": "Arial",
+            "fill": "#333333",
+            "charSpacing": 220
+          }
+        ]
+      },
+      "sortOrder": 4
+    },
+    {
+      "assetKey": "minimal-title",
+      "name": "Minimal Title",
+      "assetType": "TEXT",
+      "category": "Minimal",
+      "assetData": {
+        "styles": [
+          {
+            "text": "LESS IS MORE",
+            "fontSize": 32,
+            "fontFamily": "Arial",
+            "fill": "#222222",
+            "fontWeight": "bold",
+            "charSpacing": 35
+          },
+          {
+            "text": "SIMPLE • MODERN • TIMELESS",
+            "fontSize": 13,
+            "fontFamily": "Arial",
+            "fill": "#777777",
+            "charSpacing": 45
+          }
+        ]
+      },
+      "sortOrder": 5
+    },
+    {
+      "assetKey": "modern",
+      "name": "Modern",
+      "assetType": "TEXT",
+      "category": "Minimal",
+      "assetData": {
+        "styles": [
+          {
+            "text": "MODERN",
+            "fontSize": 46,
+            "fontFamily": "Arial",
+            "fill": "#111827",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "DESIGN STUDIO",
+            "fontSize": 14,
+            "fontFamily": "Arial",
+            "fill": "#64748B",
+            "charSpacing": 100
+          }
+        ]
+      },
+      "sortOrder": 6
+    },
+    {
+      "assetKey": "bold-statement",
+      "name": "Bold Statement",
+      "assetType": "TEXT",
+      "category": "Minimal",
+      "assetData": {
+        "styles": [
+          {
+            "text": "MAKE IT",
+            "fontSize": 38,
+            "fontFamily": "Arial",
+            "fill": "#111827",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "HAPPEN.",
+            "fontSize": 42,
+            "fontFamily": "Arial",
+            "fill": "#2563EB",
+            "fontWeight": "bold"
+          }
+        ]
+      },
+      "sortOrder": 7
+    },
+    {
+      "assetKey": "thank-you",
+      "name": "Thank You!",
+      "assetType": "TEXT",
+      "category": "Celebration",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Thank",
+            "fontSize": 48,
+            "fontFamily": "Pacifico, cursive",
+            "fill": "#1677C8"
+          },
+          {
+            "text": "you!",
+            "fontSize": 48,
+            "fontFamily": "Dancing Script, cursive",
+            "fill": "#1677C8",
+            "fontWeight": "bold"
+          }
+        ]
+      },
+      "sortOrder": 8
+    },
+    {
+      "assetKey": "happy-birthday",
+      "name": "Happy Birthday",
+      "assetType": "TEXT",
+      "category": "Celebration",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Happy",
+            "fontSize": 39,
+            "fontFamily": "Pacifico, cursive",
+            "fill": "#111111"
+          },
+          {
+            "text": "BIRTHDAY",
+            "fontSize": 32,
+            "fontFamily": "Arial",
+            "fill": "#111111",
+            "fontWeight": "bold",
+            "charSpacing": 15
+          }
+        ]
+      },
+      "sortOrder": 9
+    },
+    {
+      "assetKey": "congratulations",
+      "name": "Congratulations",
+      "assetType": "TEXT",
+      "category": "Celebration",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Congratulations",
+            "fontSize": 38,
+            "fontFamily": "Great Vibes, cursive",
+            "fill": "#B7791F"
+          },
+          {
+            "text": "YOU DID IT",
+            "fontSize": 15,
+            "fontFamily": "Arial",
+            "fill": "#475569",
+            "fontWeight": "bold",
+            "charSpacing": 100
+          }
+        ]
+      },
+      "sortOrder": 10
+    },
+    {
+      "assetKey": "best-wishes",
+      "name": "Best Wishes",
+      "assetType": "TEXT",
+      "category": "Celebration",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Best Wishes",
+            "fontSize": 44,
+            "fontFamily": "Allura, cursive",
+            "fill": "#9D174D"
+          },
+          {
+            "text": "WITH LOVE",
+            "fontSize": 13,
+            "fontFamily": "Arial",
+            "fill": "#64748B",
+            "charSpacing": 130
+          }
+        ]
+      },
+      "sortOrder": 11
+    },
+    {
+      "assetKey": "anniversary",
+      "name": "Anniversary",
+      "assetType": "TEXT",
+      "category": "Celebration",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Happy Anniversary",
+            "fontSize": 39,
+            "fontFamily": "Parisienne, cursive",
+            "fill": "#A16207"
+          },
+          {
+            "text": "TOGETHER IS A BEAUTIFUL PLACE TO BE",
+            "fontSize": 12,
+            "fontFamily": "Georgia",
+            "fill": "#57534E",
+            "charSpacing": 25
+          }
+        ]
+      },
+      "sortOrder": 12
+    },
+    {
+      "assetKey": "grand-opening",
+      "name": "Grand Opening",
+      "assetType": "TEXT",
+      "category": "Business",
+      "assetData": {
+        "styles": [
+          {
+            "text": "GRAND",
+            "fontSize": 43,
+            "fontFamily": "Arial",
+            "fill": "#B91C1C",
+            "fontWeight": "bold",
+            "charSpacing": 100
+          },
+          {
+            "text": "OPENING",
+            "fontSize": 35,
+            "fontFamily": "Georgia",
+            "fill": "#1F2937",
+            "charSpacing": 80
+          }
+        ]
+      },
+      "sortOrder": 13
+    },
+    {
+      "assetKey": "welcome",
+      "name": "Welcome",
+      "assetType": "TEXT",
+      "category": "Business",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Welcome",
+            "fontSize": 48,
+            "fontFamily": "Great Vibes, cursive",
+            "fill": "#0F766E"
+          },
+          {
+            "text": "WE ARE GLAD YOU'RE HERE",
+            "fontSize": 13,
+            "fontFamily": "Arial",
+            "fill": "#475569",
+            "charSpacing": 45
+          }
+        ]
+      },
+      "sortOrder": 14
+    },
+    {
+      "assetKey": "special-offer",
+      "name": "Special Offer",
+      "assetType": "TEXT",
+      "category": "Business",
+      "assetData": {
+        "styles": [
+          {
+            "text": "SPECIAL",
+            "fontSize": 37,
+            "fontFamily": "Arial",
+            "fill": "#DC2626",
+            "fontWeight": "bold",
+            "charSpacing": 80
+          },
+          {
+            "text": "OFFER",
+            "fontSize": 45,
+            "fontFamily": "Arial",
+            "fill": "#111827",
+            "fontWeight": "bold"
+          }
+        ]
+      },
+      "sortOrder": 15
+    },
+    {
+      "assetKey": "sale",
+      "name": "Sale",
+      "assetType": "TEXT",
+      "category": "Business",
+      "assetData": {
+        "styles": [
+          {
+            "text": "BIG",
+            "fontSize": 30,
+            "fontFamily": "Arial",
+            "fill": "#111827",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "SALE",
+            "fontSize": 58,
+            "fontFamily": "Arial",
+            "fill": "#E11D48",
+            "fontWeight": "bold",
+            "charSpacing": 35
+          }
+        ]
+      },
+      "sortOrder": 16
+    },
+    {
+      "assetKey": "professional",
+      "name": "Professional",
+      "assetType": "TEXT",
+      "category": "Business",
+      "assetData": {
+        "styles": [
+          {
+            "text": "YOUR BRAND",
+            "fontSize": 35,
+            "fontFamily": "Georgia",
+            "fill": "#1E3A8A",
+            "charSpacing": 55
+          },
+          {
+            "text": "PROFESSIONAL SERVICES",
+            "fontSize": 13,
+            "fontFamily": "Arial",
+            "fill": "#64748B",
+            "charSpacing": 90
+          }
+        ]
+      },
+      "sortOrder": 17
+    },
+    {
+      "assetKey": "fire-away",
+      "name": "Fire Away",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "FIRE",
+            "fontSize": 48,
+            "fontFamily": "Caveat, cursive",
+            "fill": "#F97316",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "away",
+            "fontSize": 38,
+            "fontFamily": "Pacifico, cursive",
+            "fill": "#6B7280"
+          }
+        ]
+      },
+      "sortOrder": 18
+    },
+    {
+      "assetKey": "dream-big",
+      "name": "Dream Big",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "DREAM",
+            "fontSize": 43,
+            "fontFamily": "Arial",
+            "fill": "#7C3AED",
+            "fontWeight": "bold",
+            "charSpacing": 80
+          },
+          {
+            "text": "big",
+            "fontSize": 47,
+            "fontFamily": "Allura, cursive",
+            "fill": "#EC4899"
+          }
+        ]
+      },
+      "sortOrder": 19
+    },
+    {
+      "assetKey": "good-vibes",
+      "name": "Good Vibes",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "good vibes",
+            "fontSize": 43,
+            "fontFamily": "Pacifico, cursive",
+            "fill": "#059669"
+          },
+          {
+            "text": "ONLY",
+            "fontSize": 14,
+            "fontFamily": "Arial",
+            "fill": "#475569",
+            "charSpacing": 160
+          }
+        ]
+      },
+      "sortOrder": 20
+    },
+    {
+      "assetKey": "stay-inspired",
+      "name": "Stay Inspired",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Stay",
+            "fontSize": 42,
+            "fontFamily": "Dancing Script, cursive",
+            "fill": "#0F766E",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "INSPIRED",
+            "fontSize": 29,
+            "fontFamily": "Arial",
+            "fill": "#1F2937",
+            "fontWeight": "bold",
+            "charSpacing": 80
+          }
+        ]
+      },
+      "sortOrder": 21
+    },
+    {
+      "assetKey": "be-creative",
+      "name": "Be Creative",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "BE",
+            "fontSize": 32,
+            "fontFamily": "Arial",
+            "fill": "#DB2777",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "creative",
+            "fontSize": 48,
+            "fontFamily": "Satisfy, cursive",
+            "fill": "#7C3AED"
+          }
+        ]
+      },
+      "sortOrder": 22
+    },
+    {
+      "assetKey": "coffee-break",
+      "name": "Coffee Break",
+      "assetType": "TEXT",
+      "category": "Decorative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Coffee Break",
+            "fontSize": 39,
+            "fontFamily": "Georgia",
+            "fill": "#166534",
+            "fontWeight": "bold"
+          },
+          {
+            "text": "TAKE A LITTLE PAUSE",
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "fill": "#78716C",
+            "charSpacing": 75
+          }
+        ]
+      },
+      "sortOrder": 23
+    },
+    {
+      "assetKey": "sweet-memories",
+      "name": "Sweet Memories",
+      "assetType": "TEXT",
+      "category": "Decorative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Sweet Memories",
+            "fontSize": 42,
+            "fontFamily": "Allura, cursive",
+            "fill": "#BE185D"
+          },
+          {
+            "text": "FOREVER IN OUR HEARTS",
+            "fontSize": 12,
+            "fontFamily": "Georgia",
+            "fill": "#78716C",
+            "charSpacing": 55
+          }
+        ]
+      },
+      "sortOrder": 24
+    },
+    {
+      "assetKey": "hello-summer",
+      "name": "Hello Summer",
+      "assetType": "TEXT",
+      "category": "Decorative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Hello",
+            "fontSize": 45,
+            "fontFamily": "Pacifico, cursive",
+            "fill": "#F97316"
+          },
+          {
+            "text": "SUMMER",
+            "fontSize": 35,
+            "fontFamily": "Arial",
+            "fill": "#0EA5E9",
+            "fontWeight": "bold",
+            "charSpacing": 90
+          }
+        ]
+      },
+      "sortOrder": 25
+    },
+    {
+      "assetKey": "love-story",
+      "name": "Love Story",
+      "assetType": "TEXT",
+      "category": "Decorative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "Love Story",
+            "fontSize": 48,
+            "fontFamily": "Great Vibes, cursive",
+            "fill": "#BE123C"
+          },
+          {
+            "text": "CHAPTER ONE",
+            "fontSize": 12,
+            "fontFamily": "Georgia",
+            "fill": "#57534E",
+            "charSpacing": 120
+          }
+        ]
+      },
+      "sortOrder": 26
+    },
+    {
+      "assetKey": "weekend-vibes",
+      "name": "Weekend Vibes",
+      "assetType": "TEXT",
+      "category": "Decorative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "WEEKEND",
+            "fontSize": 37,
+            "fontFamily": "Arial",
+            "fill": "#4338CA",
+            "fontWeight": "bold",
+            "charSpacing": 55
+          },
+          {
+            "text": "vibes",
+            "fontSize": 42,
+            "fontFamily": "Dancing Script, cursive",
+            "fill": "#F59E0B"
+          }
+        ]
+      },
+      "sortOrder": 27
+    },
+    {
+      "assetKey": "neon-glow",
+      "name": "Neon Glow",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "NOW OPEN!",
+            "fontSize": 48,
+            "fontFamily": "Arial",
+            "fill": "#8B5CF6",
+            "fontWeight": "bold",
+            "textEffect": "neon"
+          }
+        ]
+      },
+      "sortOrder": 28
+    },
+    {
+      "assetKey": "purple-3d",
+      "name": "Purple 3D",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "VIBE",
+            "fontSize": 58,
+            "fontFamily": "Arial Black, Arial",
+            "fill": "#DB2777",
+            "fontWeight": "bold",
+            "textEffect": "3d"
+          }
+        ]
+      },
+      "sortOrder": 29
+    },
+    {
+      "assetKey": "outline-impact",
+      "name": "Outline Impact",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "OUT LINE",
+            "fontSize": 48,
+            "fontFamily": "Arial",
+            "fill": "#2563EB",
+            "fontWeight": "bold",
+            "textEffect": "outline",
+            "textStrokeColor": "#2563EB",
+            "textStrokeWidth": 2.5
+          }
+        ]
+      },
+      "sortOrder": 30
+    },
+    {
+      "assetKey": "retro-pop",
+      "name": "Retro Pop",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "YOU",
+            "fontSize": 58,
+            "fontFamily": "Georgia",
+            "fill": "#EF4444",
+            "fontWeight": "bold",
+            "textEffect": "retro",
+            "textStrokeColor": "#EF4444",
+            "textStrokeWidth": 1.5
+          }
+        ]
+      },
+      "sortOrder": 31
+    },
+    {
+      "assetKey": "striped-shadow",
+      "name": "Striped Shadow",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "YOU",
+            "fontSize": 60,
+            "fontFamily": "Arial Black, Arial",
+            "fill": "#DC2626",
+            "fontWeight": "bold",
+            "textEffect": "striped",
+            "textStripeColor": "#FDBA74"
+          }
+        ]
+      },
+      "sortOrder": 32
+    },
+    {
+      "assetKey": "outside-striped-shadow",
+      "name": "Outside Striped Shadow",
+      "assetType": "TEXT",
+      "category": "Creative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "YOU",
+            "fontSize": 68,
+            "fontFamily": "Arial Black, Arial",
+            "fill": "#FF4D55",
+            "fontWeight": "bold",
+            "textEffect": "outside-striped",
+            "textStripeColor": "#FF4D55"
+          }
+        ]
+      },
+      "sortOrder": 33
+    },
+    {
+      "assetKey": "neon-pink",
+      "name": "Neon Pink",
+      "assetType": "TEXT",
+      "category": "Decorative",
+      "assetData": {
+        "styles": [
+          {
+            "text": "GOOD VIBES",
+            "fontSize": 42,
+            "fontFamily": "Arial",
+            "fill": "#EC4899",
+            "fontWeight": "bold",
+            "charSpacing": 35,
+            "textEffect": "neon"
+          }
+        ]
+      },
+      "sortOrder": 34
+    },
+    {
+      "assetKey": "gold-3d",
+      "name": "Gold 3D",
+      "assetType": "TEXT",
+      "category": "Elegant",
+      "assetData": {
+        "styles": [
+          {
+            "text": "EXCLUSIVE",
+            "fontSize": 42,
+            "fontFamily": "Georgia",
+            "fill": "#D4A017",
+            "fontWeight": "bold",
+            "charSpacing": 35,
+            "textEffect": "3d"
+          }
+        ]
+      },
+      "sortOrder": 35
+    }
+  ]
+}
