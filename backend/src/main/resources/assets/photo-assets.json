@@ -1,0 +1,406 @@
+
+{
+  "assets": [
+    {
+      "assetKey": "photo-award-trophy",
+      "name": "Golden Trophy",
+      "assetType": "PHOTO",
+      "category": "Awards",
+      "sortOrder": 1,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=900",
+        "description": "Golden award trophy"
+      }
+    },
+    {
+      "assetKey": "photo-award-medal",
+      "name": "Trophy Winner",
+      "assetType": "PHOTO",
+      "category": "Awards",
+      "sortOrder": 2,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1793929590030-b29811244e06?w=900",
+        "description": "Person holding a trophy and medal"
+      }
+    },
+    {
+      "assetKey": "photo-award-ceremony",
+      "name": "Award Ceremony",
+      "assetType": "PHOTO",
+      "category": "Awards",
+      "sortOrder": 3,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900",
+        "description": "Award event and ceremony"
+      }
+    },
+    {
+      "assetKey": "photo-award-celebration",
+      "name": "Achievement Celebration",
+      "assetType": "PHOTO",
+      "category": "Awards",
+      "sortOrder": 4,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=900",
+        "description": "Celebration and achievement"
+      }
+    },
+    {
+      "assetKey": "photo-award-gold-trophy",
+      "name": "Gold Achievement",
+      "assetType": "PHOTO",
+      "category": "Awards",
+      "sortOrder": 5,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=900",
+        "description": "Sports achievement"
+      }
+    },
+    {
+      "assetKey": "photo-award-victory",
+      "name": "Victory Moment",
+      "assetType": "PHOTO",
+      "category": "Awards",
+      "sortOrder": 6,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1791315957473-f9ab08e836d9?w=900",
+        "description": "Victory and achievement"
+      }
+    },
+
+    {
+      "assetKey": "photo-education-graduation",
+      "name": "Graduation Ceremony",
+      "assetType": "PHOTO",
+      "category": "Education",
+      "sortOrder": 1,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1658235081033-ccd89cdfe77a?w=900",
+        "description": "Graduate holding a diploma"
+      }
+    },
+    {
+      "assetKey": "photo-education-graduate",
+      "name": "Graduation Cap and Gown",
+      "assetType": "PHOTO",
+      "category": "Education",
+      "sortOrder": 2,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1689255170067-26f1ea63675a?w=900",
+        "description": "Graduation gown and cap"
+      }
+    },
+    {
+      "assetKey": "photo-education-books",
+      "name": "Books and Study",
+      "assetType": "PHOTO",
+      "category": "Education",
+      "sortOrder": 3,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900",
+        "description": "Education and learning"
+      }
+    },
+    {
+      "assetKey": "photo-education-library",
+      "name": "Library",
+      "assetType": "PHOTO",
+      "category": "Education",
+      "sortOrder": 4,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=900",
+        "description": "Library and bookshelves"
+      }
+    },
+    {
+      "assetKey": "photo-education-study",
+      "name": "Study Desk",
+      "assetType": "PHOTO",
+      "category": "Education",
+      "sortOrder": 5,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900",
+        "description": "Study and writing"
+      }
+    },
+    {
+      "assetKey": "photo-education-university",
+      "name": "University Campus",
+      "assetType": "PHOTO",
+      "category": "Education",
+      "sortOrder": 6,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1627556704353-016baeb12c79?w=900",
+        "description": "University and graduation"
+      }
+    },
+
+    {
+      "assetKey": "photo-nature-mountains",
+      "name": "Mountain Landscape",
+      "assetType": "PHOTO",
+      "category": "Nature",
+      "sortOrder": 1,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900",
+        "description": "Mountain nature landscape"
+      }
+    },
+    {
+      "assetKey": "photo-nature-forest",
+      "name": "Green Forest",
+      "assetType": "PHOTO",
+      "category": "Nature",
+      "sortOrder": 2,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=900",
+        "description": "Green forest"
+      }
+    },
+    {
+      "assetKey": "photo-nature-lake",
+      "name": "Mountain Lake",
+      "assetType": "PHOTO",
+      "category": "Nature",
+      "sortOrder": 3,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900",
+        "description": "Lake and mountain scenery"
+      }
+    },
+    {
+      "assetKey": "photo-nature-waterfall",
+      "name": "Nature Waterfall",
+      "assetType": "PHOTO",
+      "category": "Nature",
+      "sortOrder": 4,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=900",
+        "description": "Waterfall in nature"
+      }
+    },
+    {
+      "assetKey": "photo-nature-greenery",
+      "name": "Natural Greenery",
+      "assetType": "PHOTO",
+      "category": "Nature",
+      "sortOrder": 5,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900",
+        "description": "Green hills and nature"
+      }
+    },
+    {
+      "assetKey": "photo-nature-beach",
+      "name": "Ocean and Beach",
+      "assetType": "PHOTO",
+      "category": "Nature",
+      "sortOrder": 6,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900",
+        "description": "Ocean and beach landscape"
+      }
+    },
+
+    {
+      "assetKey": "photo-business-meeting",
+      "name": "Business Meeting",
+      "assetType": "PHOTO",
+      "category": "Business",
+      "sortOrder": 1,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1758518730151-cf64fddb4f0a?w=900",
+        "description": "Professional team meeting"
+      }
+    },
+    {
+      "assetKey": "photo-business-office",
+      "name": "Modern Office",
+      "assetType": "PHOTO",
+      "category": "Business",
+      "sortOrder": 2,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900",
+        "description": "Modern business office"
+      }
+    },
+    {
+      "assetKey": "photo-business-team",
+      "name": "Team Collaboration",
+      "assetType": "PHOTO",
+      "category": "Business",
+      "sortOrder": 3,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900",
+        "description": "Business team collaboration"
+      }
+    },
+    {
+      "assetKey": "photo-business-workspace",
+      "name": "Office Workspace",
+      "assetType": "PHOTO",
+      "category": "Business",
+      "sortOrder": 4,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900",
+        "description": "Professional workspace"
+      }
+    },
+    {
+      "assetKey": "photo-business-planning",
+      "name": "Business Planning",
+      "assetType": "PHOTO",
+      "category": "Business",
+      "sortOrder": 5,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900",
+        "description": "Business planning and paperwork"
+      }
+    },
+    {
+      "assetKey": "photo-business-laptop",
+      "name": "Professional Work",
+      "assetType": "PHOTO",
+      "category": "Business",
+      "sortOrder": 6,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900",
+        "description": "Professional computer workspace"
+      }
+    },
+
+    {
+      "assetKey": "photo-celebration-party",
+      "name": "Party Celebration",
+      "assetType": "PHOTO",
+      "category": "Celebration",
+      "sortOrder": 1,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900",
+        "description": "Party celebration"
+      }
+    },
+    {
+      "assetKey": "photo-celebration-balloons",
+      "name": "Colorful Balloons",
+      "assetType": "PHOTO",
+      "category": "Celebration",
+      "sortOrder": 2,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1601676852981-9e04461ddc35?w=900",
+        "description": "Colorful celebration balloons"
+      }
+    },
+    {
+      "assetKey": "photo-celebration-confetti",
+      "name": "Party Confetti",
+      "assetType": "PHOTO",
+      "category": "Celebration",
+      "sortOrder": 3,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1568823577963-7f207be7f395?w=900",
+        "description": "Colorful party decorations"
+      }
+    },
+    {
+      "assetKey": "photo-celebration-birthday",
+      "name": "Birthday Party",
+      "assetType": "PHOTO",
+      "category": "Celebration",
+      "sortOrder": 4,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900",
+        "description": "Celebration event"
+      }
+    },
+    {
+      "assetKey": "photo-celebration-festive",
+      "name": "Festive Celebration",
+      "assetType": "PHOTO",
+      "category": "Celebration",
+      "sortOrder": 5,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=900",
+        "description": "Festive party decorations"
+      }
+    },
+    {
+      "assetKey": "photo-celebration-colorful",
+      "name": "Colorful Party",
+      "assetType": "PHOTO",
+      "category": "Celebration",
+      "sortOrder": 6,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900",
+        "description": "Colorful celebration event"
+      }
+    },
+
+    {
+      "assetKey": "photo-background-marble",
+      "name": "Abstract Gradient",
+      "assetType": "PHOTO",
+      "category": "Backgrounds",
+      "sortOrder": 1,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1557683316-973673baf926?w=1200",
+        "description": "Abstract gradient background"
+      }
+    },
+    {
+      "assetKey": "photo-background-paper",
+      "name": "Nature Background",
+      "assetType": "PHOTO",
+      "category": "Backgrounds",
+      "sortOrder": 2,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1200",
+        "description": "Scenic background"
+      }
+    },
+    {
+      "assetKey": "photo-background-texture",
+      "name": "Soft Texture",
+      "assetType": "PHOTO",
+      "category": "Backgrounds",
+      "sortOrder": 3,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=1200",
+        "description": "Abstract texture background"
+      }
+    },
+    {
+      "assetKey": "photo-background-pastel",
+      "name": "Pastel Background",
+      "assetType": "PHOTO",
+      "category": "Backgrounds",
+      "sortOrder": 4,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=1200",
+        "description": "Pastel abstract background"
+      }
+    },
+    {
+      "assetKey": "photo-background-minimal",
+      "name": "Minimal Abstract",
+      "assetType": "PHOTO",
+      "category": "Backgrounds",
+      "sortOrder": 5,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1557682260-96773eb01377?w=1200",
+        "description": "Minimal abstract background"
+      }
+    },
+    {
+      "assetKey": "photo-background-nature",
+      "name": "Nature Scenic Background",
+      "assetType": "PHOTO",
+      "category": "Backgrounds",
+      "sortOrder": 6,
+      "assetData": {
+        "imageUrl": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200",
+        "description": "Scenic nature background"
+      }
+    }
+  ]
+}

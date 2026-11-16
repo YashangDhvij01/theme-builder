@@ -1,3 +1,4 @@
+
 package com.themebuilder.backend.service;
 
 import com.themebuilder.backend.entity.EditorAsset;
@@ -10,31 +11,42 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
 @Service
 public class EditorAssetService {
 
     private final EditorAssetRepository editorAssetRepository;
 
+    private static final Set<String> SUPPORTED_ASSET_TYPES = Set.of(
+            "TEXT",
+            "SHAPE",
+            "EMOJI",
+            "PHOTO",
+            "ANIMATION",
+            "BORDER"
+    );
+
     public EditorAssetService(EditorAssetRepository editorAssetRepository) {
         this.editorAssetRepository = editorAssetRepository;
     }
 
-    // 1. Fetch active text presets or shapes by type
-    // Existing method preserved for backward compatibility
+    // 1. Fetch active assets by type.
+    // Existing method preserved for backward compatibility.
     @Transactional(readOnly = true)
     public List<EditorAsset> getAssetsByType(String assetType) {
 
-        validateAssetType(assetType);
+        String normalizedType = validateAssetType(assetType);
 
         return editorAssetRepository
                 .findByAssetTypeAndIsActiveTrueOrderBySortOrderAsc(
-                        assetType.toUpperCase()
+                        normalizedType
                 );
     }
 
-    // 2. Fetch all active assets
-    // Existing method preserved
+    // 2. Fetch all active assets.
+    // Existing method preserved.
     @Transactional(readOnly = true)
     public List<EditorAsset> getAllActiveAssets() {
 
@@ -42,8 +54,7 @@ public class EditorAssetService {
                 .findByIsActiveTrueOrderByAssetTypeAscSortOrderAsc();
     }
 
-    // 3. NEW: Fetch assets with pagination
-    // Default frontend batch size will be 20
+    // 3. Fetch assets with pagination and optional category filter.
     @Transactional(readOnly = true)
     public Page<EditorAsset> getAssetsByTypePaginated(
             String assetType,
@@ -52,7 +63,7 @@ public class EditorAssetService {
             String category
     ) {
 
-        validateAssetType(assetType);
+        String normalizedType = validateAssetType(assetType);
 
         if (page < 0) {
             throw new IllegalArgumentException(
@@ -68,10 +79,9 @@ public class EditorAssetService {
 
         Pageable pageable = PageRequest.of(page, size);
 
-        String normalizedType = assetType.toUpperCase();
-
         // Category filter
-        if (category != null && !category.isBlank()
+        if (category != null
+                && !category.isBlank()
                 && !category.equalsIgnoreCase("All")) {
 
             return editorAssetRepository
@@ -90,17 +100,22 @@ public class EditorAssetService {
                 );
     }
 
-    // 4. Add a new text preset or shape
+    // 4. Add a new asset.
     @Transactional
     public EditorAsset addAsset(EditorAsset asset) {
 
         validateAsset(asset);
 
-        String assetType = asset.getAssetType().toUpperCase();
+        String assetType = asset.getAssetType()
+                .trim()
+                .toUpperCase(Locale.ROOT);
+
         String assetKey = asset.getAssetKey().trim();
 
         if (editorAssetRepository.existsByAssetTypeAndAssetKey(
-                assetType, assetKey)) {
+                assetType,
+                assetKey
+        )) {
 
             throw new IllegalArgumentException(
                     "Asset with this type and key already exists."
@@ -109,12 +124,13 @@ public class EditorAssetService {
 
         asset.setAssetType(assetType);
         asset.setAssetKey(assetKey);
+        asset.setName(asset.getName().trim());
         asset.setIsActive(true);
 
         return editorAssetRepository.save(asset);
     }
 
-    // 5. Update an existing asset
+    // 5. Update an existing asset.
     @Transactional
     public EditorAsset updateAsset(Long id, EditorAsset updatedAsset) {
 
@@ -127,7 +143,10 @@ public class EditorAssetService {
                         )
                 );
 
-        String assetType = updatedAsset.getAssetType().toUpperCase();
+        String assetType = updatedAsset.getAssetType()
+                .trim()
+                .toUpperCase(Locale.ROOT);
+
         String assetKey = updatedAsset.getAssetKey().trim();
 
         editorAssetRepository
@@ -151,7 +170,7 @@ public class EditorAssetService {
         return editorAssetRepository.save(existingAsset);
     }
 
-    // 6. Deactivate an asset instead of permanently deleting it
+    // 6. Deactivate an asset instead of permanently deleting it.
     @Transactional
     public EditorAsset deactivateAsset(Long id) {
 
@@ -167,7 +186,7 @@ public class EditorAssetService {
         return editorAssetRepository.save(asset);
     }
 
-    // 7. Activate an existing asset again
+    // 7. Activate an existing asset again.
     @Transactional
     public EditorAsset activateAsset(Long id) {
 
@@ -183,20 +202,31 @@ public class EditorAssetService {
         return editorAssetRepository.save(asset);
     }
 
-    // Validation for asset type
-    private void validateAssetType(String assetType) {
+    // 8. Validate supported asset types.
+    // Existing TEXT and SHAPE types remain supported.
+    // New EMOJI, PHOTO, ANIMATION and BORDER types are added.
+    private String validateAssetType(String assetType) {
 
-        if (assetType == null ||
-                (!assetType.equalsIgnoreCase("TEXT")
-                        && !assetType.equalsIgnoreCase("SHAPE"))) {
-
+        if (assetType == null || assetType.isBlank()) {
             throw new IllegalArgumentException(
-                    "Asset type must be TEXT or SHAPE."
+                    "Asset type is required."
             );
         }
+
+        String normalizedType = assetType.trim()
+                .toUpperCase(Locale.ROOT);
+
+        if (!SUPPORTED_ASSET_TYPES.contains(normalizedType)) {
+            throw new IllegalArgumentException(
+                    "Asset type must be one of: "
+                            + String.join(", ", SUPPORTED_ASSET_TYPES)
+            );
+        }
+
+        return normalizedType;
     }
 
-    // Validation for new and updated assets
+    // 9. Validate new and updated assets.
     private void validateAsset(EditorAsset asset) {
 
         if (asset == null) {
@@ -207,16 +237,16 @@ public class EditorAssetService {
 
         validateAssetType(asset.getAssetType());
 
-        if (asset.getAssetKey() == null ||
-                asset.getAssetKey().isBlank()) {
+        if (asset.getAssetKey() == null
+                || asset.getAssetKey().isBlank()) {
 
             throw new IllegalArgumentException(
                     "Asset key is required."
             );
         }
 
-        if (asset.getName() == null ||
-                asset.getName().isBlank()) {
+        if (asset.getName() == null
+                || asset.getName().isBlank()) {
 
             throw new IllegalArgumentException(
                     "Asset name is required."
@@ -229,8 +259,8 @@ public class EditorAssetService {
             );
         }
 
-        if (asset.getSortOrder() == null ||
-                asset.getSortOrder() < 0) {
+        if (asset.getSortOrder() == null
+                || asset.getSortOrder() < 0) {
 
             throw new IllegalArgumentException(
                     "Sort order must be zero or greater."

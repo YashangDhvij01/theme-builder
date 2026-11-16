@@ -1,0 +1,164 @@
+
+{
+  "assets": [
+    {
+      "assetKey": "fade-in",
+      "name": "Fade In",
+      "assetType": "ANIMATION",
+      "category": "Entrance",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "fade-in",
+          "durationMs": 900,
+          "delayMs": 0,
+          "easing": "ease-in-out",
+          "iterationCount": 1,
+          "target": "page-content"
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 1
+    },
+    {
+      "assetKey": "float",
+      "name": "Float",
+      "assetType": "ANIMATION",
+      "category": "Motion",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "float",
+          "durationMs": 2400,
+          "delayMs": 0,
+          "easing": "ease-in-out",
+          "iterationCount": "infinite",
+          "target": "page-content",
+          "distance": 8
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 2
+    },
+    {
+      "assetKey": "pulse",
+      "name": "Pulse",
+      "assetType": "ANIMATION",
+      "category": "Emphasis",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "pulse",
+          "durationMs": 1400,
+          "delayMs": 0,
+          "easing": "ease-in-out",
+          "iterationCount": "infinite",
+          "target": "page-content",
+          "scale": 1.025
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 3
+    },
+    {
+      "assetKey": "soft-glow",
+      "name": "Soft Glow",
+      "assetType": "ANIMATION",
+      "category": "Emphasis",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "glow",
+          "durationMs": 1800,
+          "delayMs": 0,
+          "easing": "ease-in-out",
+          "iterationCount": "infinite",
+          "target": "page-content",
+          "color": "#FBBF24"
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 4
+    },
+    {
+      "assetKey": "shimmer",
+      "name": "Shimmer",
+      "assetType": "ANIMATION",
+      "category": "Decorative",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "shimmer",
+          "durationMs": 2200,
+          "delayMs": 0,
+          "easing": "linear",
+          "iterationCount": "infinite",
+          "target": "page-overlay",
+          "color": "#FFFFFF"
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 5
+    },
+    {
+      "assetKey": "slide-up",
+      "name": "Slide Up",
+      "assetType": "ANIMATION",
+      "category": "Entrance",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "slide-up",
+          "durationMs": 800,
+          "delayMs": 0,
+          "easing": "cubic-bezier(0.22,1,0.36,1)",
+          "iterationCount": 1,
+          "target": "page-content",
+          "distance": 18
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 6
+    },
+    {
+      "assetKey": "gentle-zoom",
+      "name": "Gentle Zoom",
+      "assetType": "ANIMATION",
+      "category": "Motion",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "zoom",
+          "durationMs": 2600,
+          "delayMs": 0,
+          "easing": "ease-in-out",
+          "iterationCount": "infinite",
+          "target": "page-content",
+          "scale": 1.035
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 7
+    },
+    {
+      "assetKey": "sparkle",
+      "name": "Sparkle",
+      "assetType": "ANIMATION",
+      "category": "Decorative",
+      "assetData": {
+        "renderer": "css-animation",
+        "config": {
+          "effect": "sparkle",
+          "durationMs": 1800,
+          "delayMs": 0,
+          "easing": "ease-in-out",
+          "iterationCount": "infinite",
+          "target": "page-overlay",
+          "color": "#F5C542"
+        },
+        "previewOnly": true
+      },
+      "sortOrder": 8
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+
 package com.themebuilder.backend.service;
 
 import com.themebuilder.backend.entity.Design;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -22,7 +24,6 @@ public class DesignService {
         this.designRepository = designRepository;
     }
 
-    // 1. Create a new design
     @Transactional
     public Design createDesign(Design design) {
 
@@ -31,27 +32,30 @@ public class DesignService {
         design.setCreatedAt(now);
         design.setUpdatedAt(now);
 
-        if (design.getElements() != null) {
-
-            for (DesignElement element : design.getElements()) {
-                element.setDesign(design);
-                element.setCreatedAt(now);
-                element.setUpdatedAt(now);
-            }
-        }
+        prepareElements(design, now);
 
         return designRepository.save(design);
     }
 
-    // 2. Fetch all designs
-    // Existing method preserved
+    private void prepareElements(Design design, LocalDateTime now) {
+
+        if (design.getElements() == null) {
+            design.setElements(new ArrayList<>());
+            return;
+        }
+
+        for (DesignElement element : design.getElements()) {
+            element.setDesign(design);
+            element.setCreatedAt(now);
+            element.setUpdatedAt(now);
+        }
+    }
+
     @Transactional(readOnly = true)
     public List<Design> getAllDesigns() {
-
         return designRepository.findAll();
     }
 
-    // 3. NEW: Fetch saved designs with pagination
     @Transactional(readOnly = true)
     public Page<Design> getDesignsPaginated(int page, int size) {
 
@@ -73,7 +77,6 @@ public class DesignService {
                 .findAllByOrderByUpdatedAtDescIdDesc(pageable);
     }
 
-    // 4. Fetch a single design by ID
     @Transactional(readOnly = true)
     public Design getDesignById(Long id) {
 
@@ -83,7 +86,6 @@ public class DesignService {
                 );
     }
 
-    // 5. Update an existing design
     @Transactional
     public Design updateDesign(Long id, Design design) {
 
@@ -93,8 +95,17 @@ public class DesignService {
                 );
 
         existingDesign.setName(design.getName());
-        existingDesign.setBackgroundColor(design.getBackgroundColor());
+        existingDesign.setBackgroundColor(
+                design.getBackgroundColor()
+        );
 
+        existingDesign.setPageSize(design.getPageSize());
+        existingDesign.setOrientation(design.getOrientation());
+
+        // Update all pages JSON.
+        existingDesign.setPages(design.getPages());
+
+        // Preserve existing relational elements for legacy support.
         existingDesign.getElements().clear();
 
         LocalDateTime now = LocalDateTime.now();
@@ -116,10 +127,8 @@ public class DesignService {
         return designRepository.save(existingDesign);
     }
 
-    // 6. Delete a design
     @Transactional
     public void deleteDesign(Long id) {
-
         designRepository.deleteById(id);
     }
 }
