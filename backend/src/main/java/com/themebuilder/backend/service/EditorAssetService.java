@@ -25,7 +25,8 @@ public class EditorAssetService {
             "EMOJI",
             "PHOTO",
             "ANIMATION",
-            "BORDER"
+            "BORDER",
+            "GRAPHIC"
     );
 
     public EditorAssetService(EditorAssetRepository editorAssetRepository) {
