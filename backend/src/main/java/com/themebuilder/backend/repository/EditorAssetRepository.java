@@ -38,4 +38,17 @@ public interface EditorAssetRepository extends JpaRepository<EditorAsset, Long> 
             String category,
             Pageable pageable
     );
+
+    List<EditorAsset> findByAssetType(
+            String assetType
+    );
+
+    List<EditorAsset> findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc(
+            String assetType
+    );
+
+    List<EditorAsset> findByAssetTypeAndIsActiveTrueAndCategoryIgnoreCaseOrderBySortOrderAscIdAsc(
+            String assetType,
+            String category
+    );
 }

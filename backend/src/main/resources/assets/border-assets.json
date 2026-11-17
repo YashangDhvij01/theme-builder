@@ -1,0 +1,223 @@
+
+{
+  "assets": [
+    {
+      "assetKey": "classic-gold",
+      "name": "Classic Gold",
+      "assetType": "BORDER",
+      "category": "Classic",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "solid",
+          "color": "#C9A227",
+          "width": 5,
+          "inset": 22,
+          "secondaryColor": "#E8D69A",
+          "secondaryWidth": 1,
+          "gap": 7,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 1
+    },
+    {
+      "assetKey": "double-gold",
+      "name": "Double Gold",
+      "assetType": "BORDER",
+      "category": "Classic",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "double",
+          "color": "#B68A2E",
+          "width": 5,
+          "inset": 18,
+          "secondaryColor": "#D9B95B",
+          "secondaryWidth": 2,
+          "gap": 8,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 2
+    },
+    {
+      "assetKey": "royal-navy",
+      "name": "Royal Navy",
+      "assetType": "BORDER",
+      "category": "Classic",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "double",
+          "color": "#172554",
+          "width": 6,
+          "inset": 20,
+          "secondaryColor": "#C9A227",
+          "secondaryWidth": 2,
+          "gap": 7,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 3
+    },
+    {
+      "assetKey": "minimal-black",
+      "name": "Minimal Black",
+      "assetType": "BORDER",
+      "category": "Minimal",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "solid",
+          "color": "#111827",
+          "width": 2,
+          "inset": 16,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 4
+    },
+    {
+      "assetKey": "soft-rounded",
+      "name": "Soft Rounded",
+      "assetType": "BORDER",
+      "category": "Minimal",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "solid",
+          "color": "#64748B",
+          "width": 3,
+          "inset": 18,
+          "radius": 22,
+          "corner": "rounded"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 5
+    },
+    {
+      "assetKey": "dotted-silver",
+      "name": "Dotted Silver",
+      "assetType": "BORDER",
+      "category": "Modern",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "dotted",
+          "color": "#94A3B8",
+          "width": 3,
+          "inset": 18,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 6
+    },
+    {
+      "assetKey": "dashed-blue",
+      "name": "Dashed Blue",
+      "assetType": "BORDER",
+      "category": "Modern",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "dashed",
+          "color": "#2563EB",
+          "width": 3,
+          "inset": 18,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 7
+    },
+    {
+      "assetKey": "emerald-elegance",
+      "name": "Emerald Elegance",
+      "assetType": "BORDER",
+      "category": "Elegant",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "double",
+          "color": "#047857",
+          "width": 5,
+          "inset": 20,
+          "secondaryColor": "#A7F3D0",
+          "secondaryWidth": 1,
+          "gap": 7,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 8
+    },
+    {
+      "assetKey": "burgundy-classic",
+      "name": "Burgundy Classic",
+      "assetType": "BORDER",
+      "category": "Elegant",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "double",
+          "color": "#7F1D1D",
+          "width": 5,
+          "inset": 20,
+          "secondaryColor": "#D6A3A3",
+          "secondaryWidth": 1,
+          "gap": 7,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 9
+    },
+    {
+      "assetKey": "purple-celebration",
+      "name": "Purple Celebration",
+      "assetType": "BORDER",
+      "category": "Celebration",
+      "assetData": {
+        "renderer": "css-border",
+        "style": {
+          "kind": "solid",
+          "color": "#7C3AED",
+          "width": 4,
+          "inset": 18,
+          "secondaryColor": "#DDD6FE",
+          "secondaryWidth": 1,
+          "corner": "square"
+        },
+        "preview": {
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      "sortOrder": 10
+    }
+  ]
+}

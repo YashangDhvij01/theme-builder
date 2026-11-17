@@ -1,0 +1,285 @@
+
+{
+  "assets": [
+    {
+      "assetKey": "emoji-smile",
+      "assetType": "EMOJI",
+      "name": "Smile",
+      "category": "Faces",
+      "assetData": { "emoji": "😀" },
+      "sortOrder": 1
+    },
+    {
+      "assetKey": "emoji-grin",
+      "assetType": "EMOJI",
+      "name": "Grin",
+      "category": "Faces",
+      "assetData": { "emoji": "😁" },
+      "sortOrder": 2
+    },
+    {
+      "assetKey": "emoji-laugh",
+      "assetType": "EMOJI",
+      "name": "Laugh",
+      "category": "Faces",
+      "assetData": { "emoji": "😂" },
+      "sortOrder": 3
+    },
+    {
+      "assetKey": "emoji-love",
+      "assetType": "EMOJI",
+      "name": "Love",
+      "category": "Faces",
+      "assetData": { "emoji": "😍" },
+      "sortOrder": 4
+    },
+    {
+      "assetKey": "emoji-kiss",
+      "assetType": "EMOJI",
+      "name": "Kiss",
+      "category": "Faces",
+      "assetData": { "emoji": "😘" },
+      "sortOrder": 5
+    },
+    {
+      "assetKey": "emoji-cool",
+      "assetType": "EMOJI",
+      "name": "Cool",
+      "category": "Faces",
+      "assetData": { "emoji": "😎" },
+      "sortOrder": 6
+    },
+    {
+      "assetKey": "emoji-party",
+      "assetType": "EMOJI",
+      "name": "Party",
+      "category": "Celebration",
+      "assetData": { "emoji": "🥳" },
+      "sortOrder": 7
+    },
+    {
+      "assetKey": "emoji-heart",
+      "assetType": "EMOJI",
+      "name": "Heart",
+      "category": "Symbols",
+      "assetData": { "emoji": "❤️" },
+      "sortOrder": 8
+    },
+    {
+      "assetKey": "emoji-star",
+      "assetType": "EMOJI",
+      "name": "Star",
+      "category": "Symbols",
+      "assetData": { "emoji": "⭐" },
+      "sortOrder": 9
+    },
+    {
+      "assetKey": "emoji-sparkles",
+      "assetType": "EMOJI",
+      "name": "Sparkles",
+      "category": "Symbols",
+      "assetData": { "emoji": "✨" },
+      "sortOrder": 10
+    },
+    {
+      "assetKey": "emoji-trophy",
+      "assetType": "EMOJI",
+      "name": "Trophy",
+      "category": "Awards",
+      "assetData": { "emoji": "🏆" },
+      "sortOrder": 11
+    },
+    {
+      "assetKey": "emoji-medal",
+      "assetType": "EMOJI",
+      "name": "Medal",
+      "category": "Awards",
+      "assetData": { "emoji": "🏅" },
+      "sortOrder": 12
+    },
+    {
+      "assetKey": "emoji-graduation",
+      "assetType": "EMOJI",
+      "name": "Graduation Cap",
+      "category": "Education",
+      "assetData": { "emoji": "🎓" },
+      "sortOrder": 13
+    },
+    {
+      "assetKey": "emoji-book",
+      "assetType": "EMOJI",
+      "name": "Book",
+      "category": "Education",
+      "assetData": { "emoji": "📚" },
+      "sortOrder": 14
+    },
+    {
+      "assetKey": "emoji-pencil",
+      "assetType": "EMOJI",
+      "name": "Pencil",
+      "category": "Education",
+      "assetData": { "emoji": "✏️" },
+      "sortOrder": 15
+    },
+    {
+      "assetKey": "emoji-birthday",
+      "assetType": "EMOJI",
+      "name": "Birthday",
+      "category": "Celebration",
+      "assetData": { "emoji": "🎂" },
+      "sortOrder": 16
+    },
+    {
+      "assetKey": "emoji-gift",
+      "assetType": "EMOJI",
+      "name": "Gift",
+      "category": "Celebration",
+      "assetData": { "emoji": "🎁" },
+      "sortOrder": 17
+    },
+    {
+      "assetKey": "emoji-balloon",
+      "assetType": "EMOJI",
+      "name": "Balloon",
+      "category": "Celebration",
+      "assetData": { "emoji": "🎈" },
+      "sortOrder": 18
+    },
+    {
+      "assetKey": "emoji-fireworks",
+      "assetType": "EMOJI",
+      "name": "Fireworks",
+      "category": "Celebration",
+      "assetData": { "emoji": "🎆" },
+      "sortOrder": 19
+    },
+    {
+      "assetKey": "emoji-flower",
+      "assetType": "EMOJI",
+      "name": "Flower",
+      "category": "Nature",
+      "assetData": { "emoji": "🌸" },
+      "sortOrder": 20
+    },
+    {
+      "assetKey": "emoji-rose",
+      "assetType": "EMOJI",
+      "name": "Rose",
+      "category": "Nature",
+      "assetData": { "emoji": "🌹" },
+      "sortOrder": 21
+    },
+    {
+      "assetKey": "emoji-tree",
+      "assetType": "EMOJI",
+      "name": "Tree",
+      "category": "Nature",
+      "assetData": { "emoji": "🌳" },
+      "sortOrder": 22
+    },
+    {
+      "assetKey": "emoji-sun",
+      "assetType": "EMOJI",
+      "name": "Sun",
+      "category": "Nature",
+      "assetData": { "emoji": "☀️" },
+      "sortOrder": 23
+    },
+    {
+      "assetKey": "emoji-rainbow",
+      "assetType": "EMOJI",
+      "name": "Rainbow",
+      "category": "Nature",
+      "assetData": { "emoji": "🌈" },
+      "sortOrder": 24
+    },
+    {
+      "assetKey": "emoji-butterfly",
+      "assetType": "EMOJI",
+      "name": "Butterfly",
+      "category": "Nature",
+      "assetData": { "emoji": "🦋" },
+      "sortOrder": 25
+    },
+    {
+      "assetKey": "emoji-bird",
+      "assetType": "EMOJI",
+      "name": "Bird",
+      "category": "Animals",
+      "assetData": { "emoji": "🐦" },
+      "sortOrder": 26
+    },
+    {
+      "assetKey": "emoji-dog",
+      "assetType": "EMOJI",
+      "name": "Dog",
+      "category": "Animals",
+      "assetData": { "emoji": "🐶" },
+      "sortOrder": 27
+    },
+    {
+      "assetKey": "emoji-cat",
+      "assetType": "EMOJI",
+      "name": "Cat",
+      "category": "Animals",
+      "assetData": { "emoji": "🐱" },
+      "sortOrder": 28
+    },
+    {
+      "assetKey": "emoji-paw",
+      "assetType": "EMOJI",
+      "name": "Paw Prints",
+      "category": "Animals",
+      "assetData": { "emoji": "🐾" },
+      "sortOrder": 29
+    },
+    {
+      "assetKey": "emoji-check",
+      "assetType": "EMOJI",
+      "name": "Check Mark",
+      "category": "Symbols",
+      "assetData": { "emoji": "✅" },
+      "sortOrder": 30
+    },
+    {
+      "assetKey": "emoji-crown",
+      "assetType": "EMOJI",
+      "name": "Crown",
+      "category": "Awards",
+      "assetData": { "emoji": "👑" },
+      "sortOrder": 31
+    },
+    {
+      "assetKey": "emoji-ribbon",
+      "assetType": "EMOJI",
+      "name": "Ribbon",
+      "category": "Awards",
+      "assetData": { "emoji": "🎀" },
+      "sortOrder": 32
+    },
+    {
+      "assetKey": "emoji-handshake",
+      "assetType": "EMOJI",
+      "name": "Handshake",
+      "category": "Business",
+      "assetData": { "emoji": "🤝" },
+      "sortOrder": 33
+    },
+    {
+      "assetKey": "emoji-briefcase",
+      "assetType": "EMOJI",
+      "name": "Briefcase",
+      "category": "Business",
+      "assetData": { "emoji": "💼" },
+      "sortOrder": 34
+    },
+    {
+      "assetKey": "emoji-chart",
+      "assetType": "EMOJI",
+      "name": "Chart",
+      "category": "Business",
+      "assetData": { "emoji": "📈" },
+      "sortOrder": 35
+    }
+  ]
+}
