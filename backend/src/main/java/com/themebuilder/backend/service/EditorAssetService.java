@@ -55,7 +55,7 @@ public class EditorAssetService {
                 .findByIsActiveTrueOrderByAssetTypeAscSortOrderAsc();
     }
 
-    // 3. Fetch assets with pagination and optional category filter.
+    // 3. Fetch assets with pagination, optional category filter, and optional backend database search.
     @Transactional(readOnly = true)
     public Page<EditorAsset> getAssetsByTypePaginated(
             String assetType,
@@ -63,8 +63,21 @@ public class EditorAssetService {
             int size,
             String category
     ) {
+        return getAssetsByTypePaginated(assetType, page, size, category, null);
+    }
 
-        String normalizedType = validateAssetType(assetType);
+    @Transactional(readOnly = true)
+    public Page<EditorAsset> getAssetsByTypePaginated(
+            String assetType,
+            int page,
+            int size,
+            String category,
+            String search
+    ) {
+
+        String normalizedType = (assetType != null && !assetType.isBlank())
+                ? validateAssetType(assetType)
+                : null;
 
         if (page < 0) {
             throw new IllegalArgumentException(
@@ -80,20 +93,35 @@ public class EditorAssetService {
 
         Pageable pageable = PageRequest.of(page, size);
 
-        // Category filter
-        if (category != null
-                && !category.isBlank()
-                && !category.equalsIgnoreCase("All")) {
+        String trimmedCategory = (category != null && !category.isBlank() && !category.equalsIgnoreCase("All"))
+                ? category.trim()
+                : null;
 
+        String trimmedSearch = (search != null && !search.isBlank())
+                ? search.trim()
+                : null;
+
+        // Backend database search across name, key, category, and JSON assetData tags/keywords
+        if (trimmedSearch != null) {
+            return editorAssetRepository.searchAssetsNative(
+                    normalizedType,
+                    trimmedCategory,
+                    trimmedSearch,
+                    pageable
+            );
+        }
+
+        // Category filter without search
+        if (trimmedCategory != null) {
             return editorAssetRepository
                     .findByAssetTypeAndIsActiveTrueAndCategoryIgnoreCaseOrderBySortOrderAscIdAsc(
                             normalizedType,
-                            category.trim(),
+                            trimmedCategory,
                             pageable
                     );
         }
 
-        // Without category filter
+        // Without category filter or search
         return editorAssetRepository
                 .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc(
                         normalizedType,
