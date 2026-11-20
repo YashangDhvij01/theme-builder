@@ -55,14 +55,15 @@ public class EditorAssetController {
         );
     }
 
-    // 4. Paginated shapes.
+    // 4. Paginated shapes with optional search.
     // Default page size: 10
-    // URL: /api/assets/shapes/page?page=0&size=10
+    // URL: /api/assets/shapes/page?page=0&size=10&search=circle
     @GetMapping("/shapes/page")
     public ResponseEntity<Page<EditorAsset>> getPaginatedShapes(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
-            @RequestParam(required = false) String category
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String search
     ) {
 
         return ResponseEntity.ok(
@@ -70,19 +71,21 @@ public class EditorAssetController {
                         "SHAPE",
                         page,
                         size,
-                        category
+                        category,
+                        search
                 )
         );
     }
 
-    // 5. Paginated text presets.
+    // 5. Paginated text presets with optional search.
     // Default page size: 10
-    // URL: /api/assets/text/page?page=0&size=10
+    // URL: /api/assets/text/page?page=0&size=10&search=heading
     @GetMapping("/text/page")
     public ResponseEntity<Page<EditorAsset>> getPaginatedTextAssets(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
-            @RequestParam(required = false) String category
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String search
     ) {
 
         return ResponseEntity.ok(
@@ -90,28 +93,28 @@ public class EditorAssetController {
                         "TEXT",
                         page,
                         size,
-                        category
+                        category,
+                        search
                 )
         );
     }
 
-    // 6. Generic paginated assets endpoint.
+    // 6. Generic paginated assets endpoint with backend database search.
     // Supports SHAPE, TEXT, EMOJI, PHOTO, ANIMATION and BORDER.
     // Default page size: 10
     //
     // Examples:
-    // /api/assets/EMOJI/page?page=0&size=10
-    // /api/assets/PHOTO/page?page=0&size=10&category=Nature
-    // /api/assets/ANIMATION/page?page=1&size=10
-    // /api/assets/BORDER/page?page=0&size=10&category=Floral
-    //
-    // Existing SHAPE and TEXT routes above are preserved.
+    // /api/assets/EMOJI/page?page=0&size=10&search=smile
+    // /api/assets/PHOTO/page?page=0&size=10&category=Nature&search=mountain
+    // /api/assets/ANIMATION/page?page=0&size=10&search=confetti
+    // /api/assets/BORDER/page?page=0&size=10&category=Floral&search=gold
     @GetMapping("/{assetType}/page")
     public ResponseEntity<Page<EditorAsset>> getPaginatedAssetsByType(
             @PathVariable String assetType,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
-            @RequestParam(required = false) String category
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String search
     ) {
 
         return ResponseEntity.ok(
@@ -119,7 +122,30 @@ public class EditorAssetController {
                         assetType,
                         page,
                         size,
-                        category
+                        category,
+                        search
+                )
+        );
+    }
+
+    // 6b. Global/universal backend database search across elements.
+    // URL: /api/assets/search?assetType=EMOJI&search=happy&category=Faces&page=0&size=20
+    @GetMapping("/search")
+    public ResponseEntity<Page<EditorAsset>> searchAssets(
+            @RequestParam(required = false) String assetType,
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String search,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size
+    ) {
+
+        return ResponseEntity.ok(
+                editorAssetService.getAssetsByTypePaginated(
+                        assetType,
+                        page,
+                        size,
+                        category,
+                        search
                 )
         );
     }
