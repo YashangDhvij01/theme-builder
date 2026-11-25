@@ -3,11 +3,13 @@ package com.themebuilder.backend.controller;
 import com.themebuilder.backend.entity.EditorAsset;
 import com.themebuilder.backend.service.GraphicService;
 import org.springframework.data.domain.Page;
+import org.springframework.http.CacheControl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/api/graphics")
@@ -15,6 +17,13 @@ import java.util.Map;
 public class GraphicController {
 
     private final GraphicService graphicService;
+
+    /** Graphics are static seed data: let the browser reuse responses for 1 minute. */
+    private static <T> ResponseEntity<T> cached(T body) {
+        return ResponseEntity.ok()
+                .cacheControl(CacheControl.maxAge(60, TimeUnit.SECONDS).cachePublic())
+                .body(body);
+    }
 
     public GraphicController(GraphicService graphicService) {
         this.graphicService = graphicService;
@@ -29,7 +38,7 @@ public class GraphicController {
     public ResponseEntity<List<Map<String, Object>>> getCategories(
             @RequestParam(required = false) String type
     ) {
-        return ResponseEntity.ok(graphicService.getCategories(type));
+        return cached(graphicService.getCategories(type));
     }
 
     /**
@@ -42,7 +51,7 @@ public class GraphicController {
             @RequestParam(required = false) String type,
             @RequestParam(defaultValue = "20") int limit
     ) {
-        return ResponseEntity.ok(graphicService.getRecommended(type, limit));
+        return cached(graphicService.getRecommended(type, limit));
     }
 
     /**
@@ -59,7 +68,7 @@ public class GraphicController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size
     ) {
-        return ResponseEntity.ok(
+        return cached(
                 graphicService.getGraphics(categoryId, search, type, recommended, page, size)
         );
     }
