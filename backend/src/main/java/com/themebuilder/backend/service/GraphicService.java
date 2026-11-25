@@ -7,7 +7,6 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,20 +14,47 @@ import java.util.stream.Collectors;
 @Service
 public class GraphicService {
 
+    private static final long CACHE_TTL_MS = 10 * 60 * 1000L;
+
     private final EditorAssetRepository editorAssetRepository;
+
+    // In-memory snapshot of all active graphics. Every endpoint filters this list
+    // instead of re-reading the whole table (with big SVG JSON) from the remote DB.
+    private volatile List<EditorAsset> snapshot;
+    private volatile long snapshotLoadedAt;
 
     public GraphicService(EditorAssetRepository editorAssetRepository) {
         this.editorAssetRepository = editorAssetRepository;
+    }
+
+    private List<EditorAsset> loadAll() {
+        List<EditorAsset> current = snapshot;
+        if (current == null || System.currentTimeMillis() - snapshotLoadedAt > CACHE_TTL_MS) {
+            synchronized (this) {
+                current = snapshot;
+                if (current == null || System.currentTimeMillis() - snapshotLoadedAt > CACHE_TTL_MS) {
+                    current = refreshCache();
+                }
+            }
+        }
+        return current;
+    }
+
+    /** Reload the snapshot from the database (called on startup after seeding and on TTL expiry). */
+    public synchronized List<EditorAsset> refreshCache() {
+        List<EditorAsset> fresh = List.copyOf(editorAssetRepository
+                .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc("GRAPHIC"));
+        snapshot = fresh;
+        snapshotLoadedAt = System.currentTimeMillis();
+        return fresh;
     }
 
     /**
      * Fetch aggregated categories with metadata, counts, and preview icons.
      * Optionally filtered by type: "static" or "animated".
      */
-    @Transactional(readOnly = true)
     public List<Map<String, Object>> getCategories(String type) {
-        List<EditorAsset> allGraphics = editorAssetRepository
-                .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc("GRAPHIC");
+        List<EditorAsset> allGraphics = loadAll();
 
         // Maintain category display order
         Map<String, List<EditorAsset>> grouped = new LinkedHashMap<>();
@@ -78,7 +104,6 @@ public class GraphicService {
         return categorySummaries;
     }
 
-    @Transactional(readOnly = true)
     public List<Map<String, Object>> getCategories() {
         return getCategories(null);
     }
@@ -86,7 +111,6 @@ public class GraphicService {
     /**
      * Search and filter graphics with pagination.
      */
-    @Transactional(readOnly = true)
     public Page<EditorAsset> getGraphics(
             String categoryId,
             String search,
@@ -102,22 +126,29 @@ public class GraphicService {
             throw new IllegalArgumentException("Page size must be between 1 and 100.");
         }
 
-        List<EditorAsset> allGraphics = editorAssetRepository
-                .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc("GRAPHIC");
+        List<EditorAsset> allGraphics = loadAll();
 
         // Apply in-memory filters
         List<EditorAsset> filtered = allGraphics.stream()
                 .filter(asset -> {
                     Map<String, Object> data = asset.getAssetData();
 
-                    // Category Filter
+                    // Category Filter (accepts a single id/name or a comma-separated list)
                     if (categoryId != null && !categoryId.isBlank() && !"all".equalsIgnoreCase(categoryId)) {
                         String assetCatId = data != null && data.get("categoryId") != null
                                 ? String.valueOf(data.get("categoryId"))
                                 : toKebabCase(asset.getCategory());
-                        boolean matchId = assetCatId.equalsIgnoreCase(categoryId.trim());
-                        boolean matchName = asset.getCategory() != null && asset.getCategory().equalsIgnoreCase(categoryId.trim());
-                        if (!matchId && !matchName) {
+                        boolean matched = false;
+                        for (String wanted : categoryId.split(",")) {
+                            String w = wanted.trim();
+                            if (w.isEmpty()) continue;
+                            if (assetCatId.equalsIgnoreCase(w)
+                                    || (asset.getCategory() != null && asset.getCategory().equalsIgnoreCase(w))) {
+                                matched = true;
+                                break;
+                            }
+                        }
+                        if (!matched) {
                             return false;
                         }
                     }
@@ -165,6 +196,21 @@ public class GraphicService {
                 })
                 .collect(Collectors.toList());
 
+        // For merged sections (several categories), interleave so every collection is represented.
+        if (categoryId != null && categoryId.contains(",")) {
+            Map<String, List<EditorAsset>> byCat = new LinkedHashMap<>();
+            for (EditorAsset a : filtered) {
+                byCat.computeIfAbsent(a.getCategory() == null ? "" : a.getCategory(), k -> new ArrayList<>()).add(a);
+            }
+            List<EditorAsset> mixed = new ArrayList<>(filtered.size());
+            for (int i = 0; mixed.size() < filtered.size(); i++) {
+                for (List<EditorAsset> list : byCat.values()) {
+                    if (i < list.size()) mixed.add(list.get(i));
+                }
+            }
+            filtered = mixed;
+        }
+
         Pageable pageable = PageRequest.of(page, size);
         int start = Math.min((int) pageable.getOffset(), filtered.size());
         int end = Math.min(start + pageable.getPageSize(), filtered.size());
@@ -177,12 +223,10 @@ public class GraphicService {
      * Get recommended graphics for the top horizontal rail.
      * Optionally filtered by type: "static" or "animated".
      */
-    @Transactional(readOnly = true)
     public List<EditorAsset> getRecommended(String type, int limit) {
         int safeLimit = limit > 0 ? Math.min(limit, 50) : 20;
 
-        List<EditorAsset> allGraphics = editorAssetRepository
-                .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc("GRAPHIC");
+        List<EditorAsset> allGraphics = loadAll();
 
         return allGraphics.stream()
                 .filter(asset -> {
@@ -200,7 +244,6 @@ public class GraphicService {
                 .collect(Collectors.toList());
     }
 
-    @Transactional(readOnly = true)
     public List<EditorAsset> getRecommended(int limit) {
         return getRecommended(null, limit);
     }
@@ -208,10 +251,16 @@ public class GraphicService {
     /**
      * Get single graphic by ID or assetKey.
      */
-    @Transactional(readOnly = true)
     public Optional<EditorAsset> getGraphicByIdOrKey(String identifier) {
         if (identifier == null || identifier.isBlank()) {
             return Optional.empty();
+        }
+
+        String ident = identifier.trim();
+        for (EditorAsset a : loadAll()) {
+            if (ident.equals(String.valueOf(a.getId())) || ident.equals(a.getAssetKey())) {
+                return Optional.of(a);
+            }
         }
 
         try {
@@ -252,6 +301,9 @@ public class GraphicService {
             case "educational-graphics" -> "book-open";
             case "business-graphics" -> "briefcase";
             case "lines-dividers" -> "minus";
+            case "featured" -> "star";
+            case "social-media" -> "share";
+            case "realistic-animals" -> "paw-print";
             case "abstract-shapes" -> "shapes";
             case "gradients-blurs" -> "palette";
             default -> "sparkles";

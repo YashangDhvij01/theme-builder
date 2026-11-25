@@ -2,6 +2,7 @@ package com.themebuilder.backend.config;
 
 import com.themebuilder.backend.entity.EditorAsset;
 import com.themebuilder.backend.repository.EditorAssetRepository;
+import com.themebuilder.backend.service.GraphicService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.ClassPathResource;
@@ -22,19 +23,23 @@ public class GraphicDataInitializer implements CommandLineRunner {
 
     private final EditorAssetRepository editorAssetRepository;
     private final JsonMapper jsonMapper;
+    private final GraphicService graphicService;
 
     public GraphicDataInitializer(
             EditorAssetRepository editorAssetRepository,
-            JsonMapper jsonMapper
+            JsonMapper jsonMapper,
+            GraphicService graphicService
     ) {
         this.editorAssetRepository = editorAssetRepository;
         this.jsonMapper = jsonMapper;
+        this.graphicService = graphicService;
     }
 
     @Override
     @Transactional
     public void run(String... args) throws Exception {
         loadGraphicAssets();
+        graphicService.refreshCache();
     }
 
     public int[] loadGraphicAssets() throws Exception {
