@@ -8349,6 +8349,798 @@
         "animationConfig": null,
         "svgContent": "<svg viewBox=\"0 0 180 40\" xmlns=\"http://www.w3.org/2000/svg\">\n  <!-- Center Acanthus Crest & Teardrop Finial -->\n  <path d=\"M 90 8 C 87 14 84 18 84 22 C 84 26 87 29 90 32 C 93 29 96 26 96 22 C 96 18 93 14 90 8 Z\" fill=\"#d97706\"/>\n  <circle cx=\"90\" cy=\"22\" r=\"2.5\" fill=\"#facc15\"/>\n  <!-- Left Arm Ornate Bracket Curve -->\n  <path d=\"M 84 20 C 70 12 56 12 42 20 C 30 26 20 24 10 16\" stroke=\"#d97706\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/>\n  <path d=\"M 76 22 C 64 26 52 26 42 20\" stroke=\"#facc15\" stroke-width=\"1.8\" fill=\"none\"/>\n  <circle cx=\"10\" cy=\"16\" r=\"2.5\" fill=\"#facc15\"/>\n  <circle cx=\"26\" cy=\"22\" r=\"1.8\" fill=\"#ca8a04\"/>\n  <!-- Right Arm Ornate Bracket Curve (Symmetrical) -->\n  <path d=\"M 96 20 C 110 12 124 12 138 20 C 150 26 160 24 170 16\" stroke=\"#d97706\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"/>\n  <path d=\"M 104 22 C 116 26 128 26 138 20\" stroke=\"#facc15\" stroke-width=\"1.8\" fill=\"none\"/>\n  <circle cx=\"170\" cy=\"16\" r=\"2.5\" fill=\"#facc15\"/>\n  <circle cx=\"154\" cy=\"22\" r=\"1.8\" fill=\"#ca8a04\"/>\n</svg>"
       }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-olive-asterisk",
+      "name": "Olive Asterisk",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 1,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": true,
+        "tags": [
+          "asterisk",
+          "star",
+          "burst"
+        ],
+        "keywords": [
+          "asterisk",
+          "star",
+          "burst",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#6b7c4a"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#6b7c4a\" stroke-width=\"11\" stroke-linecap=\"butt\"><line x1=\"60\" y1=\"12\" x2=\"60\" y2=\"108\"/><line x1=\"19\" y1=\"36\" x2=\"101\" y2=\"84\"/><line x1=\"19\" y1=\"84\" x2=\"101\" y2=\"36\"/></g></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-red-pebbles",
+      "name": "Red Pebbles",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 2,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": true,
+        "tags": [
+          "dots",
+          "blobs",
+          "pebbles"
+        ],
+        "keywords": [
+          "dots",
+          "blobs",
+          "pebbles",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#d32f2f"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 20c14-6 26 4 24 18s-16 22-28 14S18 26 30 20z\" fill=\"#d32f2f\"/><path d=\"M70 64c14-6 28 2 26 18s-14 24-28 16-10-28 2-34z\" fill=\"#d32f2f\"/><path d=\"M22 78c12-6 24 2 22 16s-14 18-24 10S12 84 22 78z\" fill=\"#d32f2f\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-pink-arch",
+      "name": "Pink Arch",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 3,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": true,
+        "tags": [
+          "arch",
+          "rainbow",
+          "curve"
+        ],
+        "keywords": [
+          "arch",
+          "rainbow",
+          "curve",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f4a6a6"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14 100C14 54 36 22 60 22s46 32 46 78\" fill=\"none\" stroke=\"#f4a6a6\" stroke-width=\"14\" stroke-linecap=\"butt\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-red-wave",
+      "name": "Red Wave",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 4,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "wave",
+          "squiggle",
+          "line"
+        ],
+        "keywords": [
+          "wave",
+          "squiggle",
+          "line",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#d32f2f"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 70C28 20 48 20 60 60s32 40 52-10\" fill=\"none\" stroke=\"#d32f2f\" stroke-width=\"14\" stroke-linecap=\"butt\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-olive-outline-wave",
+      "name": "Olive Outline Wave",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 5,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "wave",
+          "outline",
+          "ribbon"
+        ],
+        "keywords": [
+          "wave",
+          "outline",
+          "ribbon",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#6b7c4a"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 64C28 24 48 24 60 58s32 36 52-6l-4 22C88 112 68 104 58 78S30 38 12 84z\" fill=\"none\" stroke=\"#6b7c4a\" stroke-width=\"3\" stroke-linejoin=\"round\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-mustard-brush-strokes",
+      "name": "Mustard Brush Strokes",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 6,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "brush",
+          "strokes",
+          "yellow"
+        ],
+        "keywords": [
+          "brush",
+          "strokes",
+          "yellow",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f6c63c"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M32 24c12-8 22 6 18 22L40 84c-4 14-20 14-22 0z\" fill=\"#f6c63c\"/><path d=\"M70 46c16-8 36 4 30 16-8 14-30 20-38 12s0-22 8-28z\" fill=\"#f6c63c\"/><path d=\"M52 84c14-6 28 4 20 18s-26 14-30 6 2-20 10-24z\" fill=\"#f6c63c\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-pink-outline-blobs",
+      "name": "Pink Outline Blobs",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 7,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "outline",
+          "blobs",
+          "pink"
+        ],
+        "keywords": [
+          "outline",
+          "blobs",
+          "pink",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f4a6a6"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#f4a6a6\" stroke-width=\"3\"><path d=\"M20 44c-6-14 10-24 28-22s18 14 6 24-26 12-34-2z\"/><path d=\"M62 60c-4-12 10-20 24-16s12 18 0 28-22 4-24-12z\"/><path d=\"M30 84c4-12 22-16 32-6s2 22-12 24-24-6-20-18z\"/></g></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-terracotta-scallops",
+      "name": "Terracotta Scallops",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 8,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "scallop",
+          "arches",
+          "border"
+        ],
+        "keywords": [
+          "scallop",
+          "arches",
+          "border",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#d32f2f"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#d32f2f\" stroke-width=\"10\"><path d=\"M8 78a17 17 0 0134 0\"/><path d=\"M42 78a17 17 0 0134 0\"/><path d=\"M76 78a17 17 0 0134 0\"/></g></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-orange-scallops",
+      "name": "Orange Scallops",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 9,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "scallop",
+          "arches",
+          "orange"
+        ],
+        "keywords": [
+          "scallop",
+          "arches",
+          "orange",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f39c1f"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#f39c1f\" stroke-width=\"5\" stroke-linecap=\"round\"><path d=\"M8 78a13 13 0 0126 0\"/><path d=\"M34 78a13 13 0 0126 0\"/><path d=\"M60 78a13 13 0 0126 0\"/><path d=\"M86 78a13 13 0 0126 0\"/></g></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-slate-mosaic-strip",
+      "name": "Slate Mosaic Strip",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 10,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "mosaic",
+          "tiles",
+          "blue"
+        ],
+        "keywords": [
+          "mosaic",
+          "tiles",
+          "blue",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#8aa0b8"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"36\" width=\"11\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-4 16 41)\"/><rect x=\"23\" y=\"36\" width=\"14\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(3 29 41)\"/><rect x=\"36\" y=\"36\" width=\"13\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(1 42 41)\"/><rect x=\"49\" y=\"36\" width=\"12\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-1 55 41)\"/><rect x=\"62\" y=\"36\" width=\"11\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-3 68 41)\"/><rect x=\"75\" y=\"36\" width=\"14\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(4 81 41)\"/><rect x=\"88\" y=\"36\" width=\"13\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(2 94 41)\"/><rect x=\"101\" y=\"36\" width=\"12\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(0 107 41)\"/><rect x=\"12\" y=\"49\" width=\"11\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(1 16 54)\"/><rect x=\"25\" y=\"49\" width=\"14\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(-1 29 54)\"/><rect x=\"38\" y=\"49\" width=\"13\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(-3 42 54)\"/><rect x=\"51\" y=\"49\" width=\"12\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(4 55 54)\"/><rect x=\"64\" y=\"49\" width=\"11\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(2 68 54)\"/><rect x=\"77\" y=\"49\" width=\"14\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(0 81 54)\"/><rect x=\"90\" y=\"49\" width=\"13\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(-2 94 54)\"/><rect x=\"103\" y=\"49\" width=\"12\" height=\"12\" fill=\"#8aa0b8\" transform=\"rotate(-4 107 54)\"/><rect x=\"14\" y=\"62\" width=\"11\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(-3 16 67)\"/><rect x=\"27\" y=\"62\" width=\"14\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(4 29 67)\"/><rect x=\"40\" y=\"62\" width=\"13\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(2 42 67)\"/><rect x=\"53\" y=\"62\" width=\"12\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(0 55 67)\"/><rect x=\"66\" y=\"62\" width=\"11\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(-2 68 67)\"/><rect x=\"79\" y=\"62\" width=\"14\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(-4 81 67)\"/><rect x=\"92\" y=\"62\" width=\"13\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(3 94 67)\"/><rect x=\"105\" y=\"62\" width=\"12\" height=\"11\" fill=\"#8aa0b8\" transform=\"rotate(1 107 67)\"/><rect x=\"10\" y=\"75\" width=\"11\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(2 16 80)\"/><rect x=\"23\" y=\"75\" width=\"14\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(0 29 80)\"/><rect x=\"36\" y=\"75\" width=\"13\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-2 42 80)\"/><rect x=\"49\" y=\"75\" width=\"12\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-4 55 80)\"/><rect x=\"62\" y=\"75\" width=\"11\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(3 68 80)\"/><rect x=\"75\" y=\"75\" width=\"14\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(1 81 80)\"/><rect x=\"88\" y=\"75\" width=\"13\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-1 94 80)\"/><rect x=\"101\" y=\"75\" width=\"12\" height=\"10\" fill=\"#8aa0b8\" transform=\"rotate(-3 107 80)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-green-mosaic-band",
+      "name": "Green Mosaic Band",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 11,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "mosaic",
+          "tiles",
+          "green"
+        ],
+        "keywords": [
+          "mosaic",
+          "tiles",
+          "green",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#6b7c4a"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"6\" y=\"46\" width=\"7\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(-6 10 60)\"/><rect x=\"15\" y=\"51\" width=\"10\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(5 19 60)\"/><rect x=\"24\" y=\"47\" width=\"9\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(4 28 60)\"/><rect x=\"33\" y=\"52\" width=\"8\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(3 37 60)\"/><rect x=\"42\" y=\"48\" width=\"7\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(2 46 60)\"/><rect x=\"51\" y=\"53\" width=\"10\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(1 55 60)\"/><rect x=\"60\" y=\"49\" width=\"9\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(0 64 60)\"/><rect x=\"69\" y=\"54\" width=\"8\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(-1 73 60)\"/><rect x=\"78\" y=\"50\" width=\"7\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(-2 82 60)\"/><rect x=\"87\" y=\"46\" width=\"10\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(-3 91 60)\"/><rect x=\"96\" y=\"51\" width=\"9\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(-4 100 60)\"/><rect x=\"105\" y=\"47\" width=\"8\" height=\"9\" fill=\"#6b7c4a\" transform=\"rotate(-5 109 60)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-abstract-shapes-slate-organic-circle",
+      "name": "Slate Organic Circle",
+      "assetType": "GRAPHIC",
+      "category": "Abstract Shapes",
+      "sortOrder": 12,
+      "assetData": {
+        "categoryId": "abstract-shapes",
+        "categoryName": "Abstract Shapes",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "circle",
+          "blob",
+          "outline"
+        ],
+        "keywords": [
+          "circle",
+          "blob",
+          "outline",
+          "abstract shapes"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#8aa0b8"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M60 12c30-2 52 22 46 52s-30 48-56 42S8 78 14 46 38 14 60 12z\" fill=\"#8aa0b8\"/><path d=\"M60 26c22-2 38 16 34 38s-22 34-42 30S24 76 28 52s16-24 32-26z\" fill=\"none\" stroke=\"#eef2f6\" stroke-width=\"2.5\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-soft-white-glow",
+      "name": "Soft White Glow",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 1,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": true,
+        "tags": [
+          "glow",
+          "soft",
+          "white"
+        ],
+        "keywords": [
+          "glow",
+          "soft",
+          "white",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#e5e7eb"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><radialGradient id=\"g\" cx=\"50%\" cy=\"50%\" r=\"50%\"><stop offset=\"0\" stop-color=\"#ffffff\" stop-opacity=\"1\"/><stop offset=\"0.55\" stop-color=\"#ffffff\" stop-opacity=\"0.7\"/><stop offset=\"1\" stop-color=\"#ffffff\" stop-opacity=\"0\"/></radialGradient><filter id=\"b\"/></defs><ellipse cx=\"60\" cy=\"60\" rx=\"54\" ry=\"40\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-black-blur-bar",
+      "name": "Black Blur Bar",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 2,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": true,
+        "tags": [
+          "blur",
+          "bar",
+          "shadow"
+        ],
+        "keywords": [
+          "blur",
+          "bar",
+          "shadow",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#111111"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><filter id=\"f\" x=\"-20%\" y=\"-80%\" width=\"140%\" height=\"260%\"><feGaussianBlur stdDeviation=\"6\"/></filter></defs><rect x=\"14\" y=\"48\" width=\"92\" height=\"24\" rx=\"12\" fill=\"#111\" filter=\"url(#f)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-black-fade-up",
+      "name": "Black Fade Up",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 3,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": true,
+        "tags": [
+          "fade",
+          "black",
+          "overlay"
+        ],
+        "keywords": [
+          "fade",
+          "black",
+          "overlay",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#111111"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#000000\" stop-opacity=\"0\"/><stop offset=\"1\" stop-color=\"#000000\" stop-opacity=\"1\"/></linearGradient></defs><rect x=\"0\" y=\"0\" width=\"120\" height=\"120\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-black-vignette",
+      "name": "Black Vignette",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 4,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "vignette",
+          "radial",
+          "dark"
+        ],
+        "keywords": [
+          "vignette",
+          "radial",
+          "dark",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#111111"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><radialGradient id=\"g\" cx=\"50%\" cy=\"50%\" r=\"50%\"><stop offset=\"0\" stop-color=\"#000000\" stop-opacity=\"1\"/><stop offset=\"0.5\" stop-color=\"#000000\" stop-opacity=\"0.65\"/><stop offset=\"1\" stop-color=\"#000000\" stop-opacity=\"0\"/></radialGradient></defs><ellipse cx=\"60\" cy=\"60\" rx=\"58\" ry=\"44\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-blue-layered-slope",
+      "name": "Blue Layered Slope",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 5,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "blue",
+          "layers",
+          "slope"
+        ],
+        "keywords": [
+          "blue",
+          "layers",
+          "slope",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#2563eb"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 10L74 10C100 40 100 90 110 110L10 110z\" fill=\"#9bb4f4\"/><path d=\"M10 40C46 40 70 70 86 110L10 110z\" fill=\"#4f7be8\"/><path d=\"M10 72C34 76 48 90 56 110L10 110z\" fill=\"#1d4ed8\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-terracotta-watercolor",
+      "name": "Terracotta Watercolor",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 6,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "watercolor",
+          "orange",
+          "wash"
+        ],
+        "keywords": [
+          "watercolor",
+          "orange",
+          "wash",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#d1632b"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#f0a073\" stop-opacity=\"1\"/><stop offset=\"1\" stop-color=\"#c85a24\" stop-opacity=\"1\"/></linearGradient></defs><rect x=\"6\" y=\"6\" width=\"108\" height=\"108\" rx=\"14\" fill=\"url(#g)\"/><g fill=\"#fff\" opacity=\".18\"><circle cx=\"30\" cy=\"22\" r=\"14\"/><circle cx=\"62\" cy=\"14\" r=\"12\"/><circle cx=\"94\" cy=\"26\" r=\"16\"/><circle cx=\"48\" cy=\"34\" r=\"10\"/></g></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-coral-blur",
+      "name": "Coral Blur",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 7,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "blur",
+          "coral",
+          "glow"
+        ],
+        "keywords": [
+          "blur",
+          "coral",
+          "glow",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f26b5b"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><filter id=\"f\" x=\"-50%\" y=\"-50%\" width=\"200%\" height=\"200%\"><feGaussianBlur stdDeviation=\"9\"/></filter></defs><ellipse cx=\"54\" cy=\"62\" rx=\"26\" ry=\"34\" fill=\"#f26b5b\" filter=\"url(#f)\"/><ellipse cx=\"44\" cy=\"46\" rx=\"16\" ry=\"18\" fill=\"#f8b27a\" filter=\"url(#f)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-sunny-yellow-gradient",
+      "name": "Sunny Yellow Gradient",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 8,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "yellow",
+          "diagonal",
+          "gradient"
+        ],
+        "keywords": [
+          "yellow",
+          "diagonal",
+          "gradient",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f9d71c"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"1\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#ffffff\" stop-opacity=\"1\"/><stop offset=\"1\" stop-color=\"#f9d71c\" stop-opacity=\"1\"/></linearGradient></defs><rect x=\"6\" y=\"6\" width=\"108\" height=\"108\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-sky-to-navy",
+      "name": "Sky To Navy",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 9,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "blue",
+          "navy",
+          "sky"
+        ],
+        "keywords": [
+          "blue",
+          "navy",
+          "sky",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#243b9e"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#dbeafe\" stop-opacity=\"1\"/><stop offset=\"0.55\" stop-color=\"#7aa2e8\" stop-opacity=\"1\"/><stop offset=\"1\" stop-color=\"#25368f\" stop-opacity=\"1\"/></linearGradient></defs><rect x=\"6\" y=\"6\" width=\"108\" height=\"108\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-sunset-orange-fade",
+      "name": "Sunset Orange Fade",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 10,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "orange",
+          "sunset",
+          "fade"
+        ],
+        "keywords": [
+          "orange",
+          "sunset",
+          "fade",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#f97316"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#fff4ec\" stop-opacity=\"1\"/><stop offset=\"0.5\" stop-color=\"#fdba74\" stop-opacity=\"1\"/><stop offset=\"1\" stop-color=\"#f97316\" stop-opacity=\"1\"/></linearGradient></defs><rect x=\"6\" y=\"6\" width=\"108\" height=\"108\" rx=\"14\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-ocean-horizon-fade",
+      "name": "Ocean Horizon Fade",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 11,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "blue",
+          "ocean",
+          "horizon"
+        ],
+        "keywords": [
+          "blue",
+          "ocean",
+          "horizon",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#0ea5e9"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#ffffff\" stop-opacity=\"1\"/><stop offset=\"0.6\" stop-color=\"#bfe3f7\" stop-opacity=\"1\"/><stop offset=\"1\" stop-color=\"#0ea5e9\" stop-opacity=\"1\"/></linearGradient></defs><rect x=\"6\" y=\"6\" width=\"108\" height=\"108\" fill=\"url(#g)\"/></svg>"
+      }
+    },
+    {
+      "assetKey": "graphic-gradients-blurs-midnight-band",
+      "name": "Midnight Band",
+      "assetType": "GRAPHIC",
+      "category": "Gradients & Blurs",
+      "sortOrder": 12,
+      "assetData": {
+        "categoryId": "gradients-blurs",
+        "categoryName": "Gradients & Blurs",
+        "type": "static",
+        "assetFormat": "svg",
+        "isRecommended": false,
+        "tags": [
+          "navy",
+          "band",
+          "dark"
+        ],
+        "keywords": [
+          "navy",
+          "band",
+          "dark",
+          "gradients & blurs"
+        ],
+        "viewBox": "0 0 120 120",
+        "width": 120,
+        "height": 120,
+        "colorPalette": [
+          "#0f1b4d"
+        ],
+        "animationConfig": null,
+        "svgContent": "<svg viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#0f1b4d\" stop-opacity=\"1\"/><stop offset=\"0.5\" stop-color=\"#324181\" stop-opacity=\"0.9\"/><stop offset=\"1\" stop-color=\"#e5e7eb\" stop-opacity=\"0\"/></linearGradient></defs><rect x=\"6\" y=\"40\" width=\"108\" height=\"46\" fill=\"url(#g)\"/></svg>"
+      }
     }
   ]
 }

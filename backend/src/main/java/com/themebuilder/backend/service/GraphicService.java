@@ -252,6 +252,8 @@ public class GraphicService {
             case "educational-graphics" -> "book-open";
             case "business-graphics" -> "briefcase";
             case "lines-dividers" -> "minus";
+            case "abstract-shapes" -> "shapes";
+            case "gradients-blurs" -> "palette";
             default -> "sparkles";
         };
     }
