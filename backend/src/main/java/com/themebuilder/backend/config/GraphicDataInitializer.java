@@ -99,8 +99,13 @@ public class GraphicDataInitializer implements CommandLineRunner {
                 Map<String, Object> typedAssetData = (Map<String, Object>) jsonData;
 
                 EditorAsset existing = existingMap.get(assetKey);
-                EditorAsset asset = existing != null ? existing : new EditorAsset();
+                if (existing != null) {
+                    // Skip existing records so database updates are preserved across backend restarts
+                    skipped++;
+                    continue;
+                }
 
+                EditorAsset asset = new EditorAsset();
                 asset.setAssetKey(assetKey);
                 asset.setAssetType(assetType);
                 asset.setName(name);
@@ -113,12 +118,7 @@ public class GraphicDataInitializer implements CommandLineRunner {
                 asset.setIsActive(true);
 
                 toSave.add(asset);
-
-                if (existing != null) {
-                    updated++;
-                } else {
-                    inserted++;
-                }
+                inserted++;
             }
 
             if (!toSave.isEmpty()) {
@@ -128,11 +128,11 @@ public class GraphicDataInitializer implements CommandLineRunner {
             System.out.println("-----------------------------------");
             System.out.println("GRAPHIC ASSETS INITIALIZATION");
             System.out.println("Graphics inserted: " + inserted);
-            System.out.println("Graphics updated: " + updated);
-            System.out.println("Total graphics processed: " + toSave.size());
+            System.out.println("Graphics skipped (already existing): " + skipped);
+            System.out.println("Total graphics processed: " + (inserted + skipped));
             System.out.println("-----------------------------------");
 
-            return new int[]{inserted, updated, skipped};
+            return new int[]{inserted, 0, skipped};
         }
     }
 }
