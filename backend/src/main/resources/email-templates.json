@@ -1,0 +1,900 @@
+[
+  {
+    "templateKey": "welcome-onboarding",
+    "name": "Welcome to Nova - Getting Started Guide",
+    "category": "welcome",
+    "description": "Clean welcome email with brand logo, hero message, getting started steps, and call-to-action button.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-w-header",
+        "templateId": "header-welcome",
+        "category": "header",
+        "name": "Header Minimal",
+        "backgroundColor": "#ffffff",
+        "padding": "36px 24px 20px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 210,
+        "nodes": [
+          { "id": "n-w-logo", "type": "logo", "content": "NOVA STUDIOS", "fontSize": 20, "x": 24, "y": 24, "width": 552, "height": 36 },
+          { "id": "n-w-h1", "type": "heading", "content": "Welcome to something beautiful", "fontSize": 28, "x": 24, "y": 70, "width": 552, "height": 48 },
+          { "id": "n-w-txt", "type": "text", "content": "We are thrilled to have you here. Let us help you start creating remarkable email campaigns from day one.", "fontSize": 15, "x": 24, "y": 128, "width": 552, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-w-steps",
+        "templateId": "highlight-steps",
+        "category": "highlights",
+        "name": "3-Step Onboarding Roadmap",
+        "backgroundColor": "#f8fafc",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 210,
+        "width": 600,
+        "height": 260,
+        "nodes": [
+          { "id": "n-w-s-h", "type": "heading", "content": "3 Easy Steps to Get Started", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 32 },
+          { "id": "n-w-step1", "type": "text", "content": "1. Set Up Your Brand Kit — Add your logo, custom fonts, and hex colors.", "fontSize": 14, "x": 24, "y": 58, "width": 552, "height": 36 },
+          { "id": "n-w-step2", "type": "text", "content": "2. Pick a Pre-built Template — Browse 12+ industry layouts ready to customize.", "fontSize": 14, "x": 24, "y": 104, "width": 552, "height": 36 },
+          { "id": "n-w-step3", "type": "text", "content": "3. Send or Export — Deliver via SMTP or export production-ready HTML.", "fontSize": 14, "x": 24, "y": 150, "width": 552, "height": 36 }
+        ]
+      },
+      {
+        "id": "sec-w-cta",
+        "templateId": "button-cta",
+        "category": "buttons",
+        "name": "Get Started CTA",
+        "backgroundColor": "#ffffff",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 470,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-w-btn", "type": "button", "content": "Launch Your Workspace →", "fontSize": 16, "url": "https://example.com/start", "x": 170, "y": 30, "width": 260, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-w-footer",
+        "templateId": "footer-clean",
+        "category": "footer",
+        "name": "Clean Footer",
+        "backgroundColor": "#f1f5f9",
+        "padding": "24px",
+        "x": 0,
+        "y": 600,
+        "width": 600,
+        "height": 150,
+        "nodes": [
+          { "id": "n-w-flogo", "type": "logo", "content": "NOVA STUDIOS", "fontSize": 15, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-w-ftxt", "type": "text", "content": "© 2026 Nova Studios, Inc. All rights reserved.", "fontSize": 12, "x": 24, "y": 55, "width": 552, "height": 24 },
+          { "id": "n-w-flnk", "type": "link", "content": "Preferences  |  Unsubscribe  |  Privacy Policy", "fontSize": 12, "url": "https://example.com/unsub", "x": 24, "y": 88, "width": 552, "height": 24 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "editorial-newsletter",
+    "name": "The Chronicle - Design & Tech Monthly",
+    "category": "newsletter",
+    "description": "Editorial newsletter with masthead header, curated story highlight block, featured quote callout, and multi-link footer.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-ed-masthead",
+        "templateId": "header-chronicle",
+        "category": "header",
+        "name": "Masthead Header",
+        "backgroundColor": "#0f172a",
+        "padding": "40px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 210,
+        "nodes": [
+          { "id": "n-ed-issue", "type": "logo", "content": "THE CHRONICLE • ISSUE #48", "fontSize": 13, "x": 24, "y": 24, "width": 552, "height": 24 },
+          { "id": "n-ed-h1", "type": "heading", "content": "The Future of Digital Typography", "fontSize": 28, "x": 24, "y": 60, "width": 552, "height": 48 },
+          { "id": "n-ed-sub", "type": "text", "content": "How variable fonts, fluid sizing, and adaptive contrast are shaping modern interfaces.", "fontSize": 14, "x": 24, "y": 120, "width": 552, "height": 40 }
+        ]
+      },
+      {
+        "id": "sec-ed-story",
+        "templateId": "highlight-story",
+        "category": "highlights",
+        "name": "Lead Story Summary",
+        "backgroundColor": "#ffffff",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 210,
+        "width": 600,
+        "height": 220,
+        "nodes": [
+          { "id": "n-ed-sh", "type": "heading", "content": "Deep Dive: Micro-interactions that delight", "fontSize": 20, "x": 24, "y": 20, "width": 552, "height": 34 },
+          { "id": "n-ed-st", "type": "text", "content": "Subtle feedback loops can boost user engagement by up to 35%. We reviewed 100 top design systems to uncover which patterns truly drive retention and customer satisfaction.", "fontSize": 15, "x": 24, "y": 65, "width": 552, "height": 70 },
+          { "id": "n-ed-sbtn", "type": "button", "content": "Read Full Story (6 min) →", "fontSize": 14, "url": "https://example.com/story-1", "x": 24, "y": 145, "width": 220, "height": 42 }
+        ]
+      },
+      {
+        "id": "sec-ed-quote",
+        "templateId": "quote-box",
+        "category": "highlights",
+        "name": "Design Quote Callout",
+        "backgroundColor": "#fef3c7",
+        "padding": "28px",
+        "x": 0,
+        "y": 430,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-ed-qtxt", "type": "text", "content": "“Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.”", "fontSize": 15, "x": 24, "y": 20, "width": 552, "height": 50 },
+          { "id": "n-ed-qauthor", "type": "text", "content": "— Antoine de Saint-Exupéry", "fontSize": 13, "x": 24, "y": 78, "width": 552, "height": 24 }
+        ]
+      },
+      {
+        "id": "sec-ed-footer",
+        "templateId": "footer-newsletter",
+        "category": "footer",
+        "name": "Newsletter Footer",
+        "backgroundColor": "#f8fafc",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 560,
+        "width": 600,
+        "height": 140,
+        "nodes": [
+          { "id": "n-ed-finfo", "type": "text", "content": "You are receiving The Chronicle because you subscribed at themebuilder.io", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 24 },
+          { "id": "n-ed-flinks", "type": "link", "content": "Preferences  •  Read Online  •  Unsubscribe", "fontSize": 12, "url": "https://example.com/preferences", "x": 24, "y": 55, "width": 552, "height": 28 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "flash-sale-countdown",
+    "name": "48-Hour Weekend Flash Sale",
+    "category": "promotion",
+    "description": "High-urgency promotional campaign featuring bold discount badge, coupon code callout box, and high-contrast CTA.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-fs-hero",
+        "templateId": "header-flash-sale",
+        "category": "header",
+        "name": "Flash Sale Header",
+        "backgroundColor": "#dc2626",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 210,
+        "nodes": [
+          { "id": "n-fs-badge", "type": "logo", "content": "⚡ LIMITED TIME • 48 HOURS ONLY", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 28 },
+          { "id": "n-fs-title", "type": "heading", "content": "50% OFF STOREWIDE", "fontSize": 36, "x": 24, "y": 56, "width": 552, "height": 55 },
+          { "id": "n-fs-sub", "type": "text", "content": "Our biggest seasonal flash sale is live. Premium templates, themes, and UI packs.", "fontSize": 15, "x": 24, "y": 122, "width": 552, "height": 40 }
+        ]
+      },
+      {
+        "id": "sec-fs-coupon",
+        "templateId": "highlight-coupon",
+        "category": "highlights",
+        "name": "Coupon Code Box",
+        "backgroundColor": "#ffffff",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 210,
+        "width": 600,
+        "height": 140,
+        "nodes": [
+          { "id": "n-fs-clabel", "type": "text", "content": "ENTER PROMO CODE AT CHECKOUT:", "fontSize": 12, "x": 24, "y": 15, "width": 552, "height": 24 },
+          { "id": "n-fs-code", "type": "heading", "content": "FLASH50NOW", "fontSize": 30, "x": 24, "y": 45, "width": 552, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-fs-cta",
+        "templateId": "button-shop",
+        "category": "buttons",
+        "name": "Claim Discount CTA",
+        "backgroundColor": "#ffffff",
+        "padding": "24px",
+        "x": 0,
+        "y": 350,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-fs-btn", "type": "button", "content": "Shop The Flash Sale Now →", "fontSize": 16, "url": "https://example.com/flash-sale", "x": 160, "y": 25, "width": 280, "height": 52 }
+        ]
+      },
+      {
+        "id": "sec-fs-footer",
+        "templateId": "footer-promo",
+        "category": "footer",
+        "name": "Sale Disclaimer Footer",
+        "backgroundColor": "#f8fafc",
+        "padding": "24px",
+        "x": 0,
+        "y": 480,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-fs-fnotice", "type": "text", "content": "Offer ends Sunday at 11:59 PM PST. Cannot be combined with other coupons.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-fs-flinks", "type": "link", "content": "Terms & Conditions  |  Privacy Policy  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/unsub", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "aurora-sound-launch",
+    "name": "Introducing Aurora One - Next-Gen Acoustics",
+    "category": "product-launch",
+    "description": "Sleek product launch announcement with high-fidelity hero photography, key feature highlights, spec breakdown, and pre-order CTA.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-as-header",
+        "templateId": "header-brand-dark",
+        "category": "header",
+        "name": "Acoustics Header",
+        "backgroundColor": "#09090b",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 220,
+        "nodes": [
+          { "id": "n-as-brand", "type": "logo", "content": "AURORA AUDIO", "fontSize": 18, "x": 24, "y": 20, "width": 552, "height": 32 },
+          { "id": "n-as-h1", "type": "heading", "content": "Sound Reimagined.", "fontSize": 34, "x": 24, "y": 62, "width": 552, "height": 55 },
+          { "id": "n-as-sub", "type": "text", "content": "Meet Aurora One: Spatial lossless audio, 40-hour battery, and active titanium drivers.", "fontSize": 15, "x": 24, "y": 125, "width": 552, "height": 45 }
+        ]
+      },
+      {
+        "id": "sec-as-specs",
+        "templateId": "highlight-specs",
+        "category": "highlights",
+        "name": "Product Specifications",
+        "backgroundColor": "#18181b",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 220,
+        "width": 600,
+        "height": 230,
+        "nodes": [
+          { "id": "n-as-sp-title", "type": "heading", "content": "Engineered Without Compromise", "fontSize": 20, "x": 24, "y": 16, "width": 552, "height": 32 },
+          { "id": "n-as-feat1", "type": "text", "content": "• Custom 45mm Graphene Transducers with ultra-low THD (<0.02%)", "fontSize": 14, "x": 24, "y": 58, "width": 552, "height": 30 },
+          { "id": "n-as-feat2", "type": "text", "content": "• Hybrid ANC with 8 environmental noise-cancelling microphones", "fontSize": 14, "x": 24, "y": 94, "width": 552, "height": 30 },
+          { "id": "n-as-feat3", "type": "text", "content": "• Multipoint Bluetooth 5.4 + 24-bit/192kHz USB-C lossless streaming", "fontSize": 14, "x": 24, "y": 130, "width": 552, "height": 30 }
+        ]
+      },
+      {
+        "id": "sec-as-preorder",
+        "templateId": "button-preorder",
+        "category": "buttons",
+        "name": "Pre-Order CTA",
+        "backgroundColor": "#09090b",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 450,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-as-pbtn", "type": "button", "content": "Pre-Order Now — $349 ($50 Off) →", "fontSize": 16, "url": "https://example.com/aurora-one", "x": 150, "y": 25, "width": 300, "height": 52 }
+        ]
+      },
+      {
+        "id": "sec-as-footer",
+        "templateId": "footer-dark",
+        "category": "footer",
+        "name": "Dark Brand Footer",
+        "backgroundColor": "#000000",
+        "padding": "24px",
+        "x": 0,
+        "y": 580,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-as-fcopy", "type": "text", "content": "© 2026 Aurora Audio Lab. Designed in California.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 24 },
+          { "id": "n-as-flnk", "type": "link", "content": "Specifications  |  Warranty  |  Support  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/support", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "series-b-announcement",
+    "name": "Company Update - Announcing Our Next Chapter",
+    "category": "announcement",
+    "description": "Corporate leadership announcement highlighting company milestones, vision letter from the founders, and press release link.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-sb-header",
+        "templateId": "header-announcement",
+        "category": "header",
+        "name": "Leadership Header",
+        "backgroundColor": "#ffffff",
+        "padding": "40px 24px 20px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 200,
+        "nodes": [
+          { "id": "n-sb-tag", "type": "logo", "content": "PRESS & COMPANY NEWS", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-sb-h1", "type": "heading", "content": "Announcing our $28M Series B", "fontSize": 30, "x": 24, "y": 56, "width": 552, "height": 50 },
+          { "id": "n-sb-sub", "type": "text", "content": "Accelerating our mission to make world-class design accessible to every engineering team.", "fontSize": 15, "x": 24, "y": 115, "width": 552, "height": 45 }
+        ]
+      },
+      {
+        "id": "sec-sb-letter",
+        "templateId": "highlight-letter",
+        "category": "highlights",
+        "name": "Founder Note Block",
+        "backgroundColor": "#f8fafc",
+        "padding": "32px 28px",
+        "x": 0,
+        "y": 200,
+        "width": 600,
+        "height": 260,
+        "nodes": [
+          { "id": "n-sb-lh", "type": "heading", "content": "A note from our CEO & Co-Founders", "fontSize": 18, "x": 24, "y": 18, "width": 552, "height": 30 },
+          { "id": "n-sb-ltxt1", "type": "text", "content": "Four years ago, we set out with a simple observation: modern software teams spend too much time wrangling fragmented email templates and not enough time building meaningful customer relationships.", "fontSize": 14, "x": 24, "y": 58, "width": 552, "height": 65 },
+          { "id": "n-sb-ltxt2", "type": "text", "content": "With this new funding led by Horizon Capital, we are expanding our visual canvas, shipping real-time collaboration, and introducing automated localization.", "fontSize": 14, "x": 24, "y": 130, "width": 552, "height": 60 }
+        ]
+      },
+      {
+        "id": "sec-sb-action",
+        "templateId": "button-read-press",
+        "category": "buttons",
+        "name": "Read Press Release Button",
+        "backgroundColor": "#ffffff",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 460,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-sb-btn", "type": "button", "content": "Read Full Press Release →", "fontSize": 15, "url": "https://example.com/press", "x": 175, "y": 25, "width": 250, "height": 48 }
+        ]
+      },
+      {
+        "id": "sec-sb-footer",
+        "templateId": "footer-corporate",
+        "category": "footer",
+        "name": "Corporate Footer",
+        "backgroundColor": "#f1f5f9",
+        "padding": "24px",
+        "x": 0,
+        "y": 580,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-sb-fc", "type": "text", "content": "ThemeBuilder Inc. • 548 Market St, San Francisco, CA 94104", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 24 },
+          { "id": "n-sb-fl", "type": "link", "content": "Investor Relations  |  Press Kit  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/press-kit", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "design-systems-masterclass",
+    "name": "Live Masterclass - Scalable UI Architecture",
+    "category": "event",
+    "description": "Event invitation with date banner, speaker highlights, agenda bullet points, and RSVP registration button.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-ev-header",
+        "templateId": "header-event",
+        "category": "header",
+        "name": "Masterclass Hero",
+        "backgroundColor": "#4338ca",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 220,
+        "nodes": [
+          { "id": "n-ev-tag", "type": "logo", "content": "LIVE VIRTUAL MASTERCLASS", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-ev-h1", "type": "heading", "content": "Scalable UI Systems at Enterprise Scale", "fontSize": 28, "x": 24, "y": 56, "width": 552, "height": 52 },
+          { "id": "n-ev-datetime", "type": "text", "content": "Thursday, Dec 12, 2026 • 10:00 AM PST (90 Min Workshop + Live Q&A)", "fontSize": 15, "x": 24, "y": 122, "width": 552, "height": 40 }
+        ]
+      },
+      {
+        "id": "sec-ev-agenda",
+        "templateId": "highlight-agenda",
+        "category": "highlights",
+        "name": "Workshop Agenda",
+        "backgroundColor": "#ffffff",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 220,
+        "width": 600,
+        "height": 210,
+        "nodes": [
+          { "id": "n-ev-ah", "type": "heading", "content": "What You Will Learn", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 30 },
+          { "id": "n-ev-pt1", "type": "text", "content": "1. Multi-brand Design Tokens — Synchronizing Figma, CSS variables, and native apps.", "fontSize": 14, "x": 24, "y": 55, "width": 552, "height": 34 },
+          { "id": "n-ev-pt2", "type": "text", "content": "2. Bulletproof Email HTML — Rendering responsive components across Outlook & Gmail.", "fontSize": 14, "x": 24, "y": 95, "width": 552, "height": 34 },
+          { "id": "n-ev-pt3", "type": "text", "content": "3. Automated Component Testing — Catch visual regressions before deployment.", "fontSize": 14, "x": 24, "y": 135, "width": 552, "height": 34 }
+        ]
+      },
+      {
+        "id": "sec-ev-cta",
+        "templateId": "button-rsvp",
+        "category": "buttons",
+        "name": "RSVP Action",
+        "backgroundColor": "#f8fafc",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 430,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-ev-btn", "type": "button", "content": "Reserve My Free Seat →", "fontSize": 16, "url": "https://example.com/register-seat", "x": 170, "y": 25, "width": 260, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-ev-footer",
+        "templateId": "footer-event",
+        "category": "footer",
+        "name": "Event Footer",
+        "backgroundColor": "#ffffff",
+        "padding": "24px",
+        "x": 0,
+        "y": 560,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-ev-fcal", "type": "text", "content": "Can't attend live? Register anyway and we'll send you the full recording and slides.", "fontSize": 12, "x": 24, "y": 18, "width": 552, "height": 26 },
+          { "id": "n-ev-flnk", "type": "link", "content": "Add to Google Calendar  |  Add to Outlook  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/calendar", "x": 24, "y": 52, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "vip-black-friday",
+    "name": "VIP Early Access - Black Friday Preview",
+    "category": "sales",
+    "description": "Exclusive members-only sale access featuring tiered discount tiers, limited-time promo code, and early doorbuster links.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-bf-header",
+        "templateId": "header-vip-gold",
+        "category": "header",
+        "name": "VIP Black Friday Header",
+        "backgroundColor": "#18181b",
+        "padding": "40px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 220,
+        "nodes": [
+          { "id": "n-bf-tag", "type": "logo", "content": "VIP REWARDS MEMBER EXCLUSIVE", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-bf-h1", "type": "heading", "content": "Early Black Friday Access", "fontSize": 32, "x": 24, "y": 56, "width": 552, "height": 55 },
+          { "id": "n-bf-sub", "type": "text", "content": "Beat the crowds. Enjoy 24 hours of uninterrupted early shopping before public launch.", "fontSize": 15, "x": 24, "y": 122, "width": 552, "height": 42 }
+        ]
+      },
+      {
+        "id": "sec-bf-tiers",
+        "templateId": "highlight-tiers",
+        "category": "highlights",
+        "name": "Discount Tiers Breakdown",
+        "backgroundColor": "#27272a",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 220,
+        "width": 600,
+        "height": 200,
+        "nodes": [
+          { "id": "n-bf-th", "type": "heading", "content": "Tiered Member Savings", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 30 },
+          { "id": "n-bf-t1", "type": "text", "content": "★ Spend $100 — Save 20% with code VIP20", "fontSize": 14, "x": 24, "y": 55, "width": 552, "height": 28 },
+          { "id": "n-bf-t2", "type": "text", "content": "★ Spend $250 — Save 30% with code VIP30", "fontSize": 14, "x": 24, "y": 90, "width": 552, "height": 28 },
+          { "id": "n-bf-t3", "type": "text", "content": "★ Spend $500 — Save 40% with code VIP40 + Free Overnight Shipping", "fontSize": 14, "x": 24, "y": 125, "width": 552, "height": 28 }
+        ]
+      },
+      {
+        "id": "sec-bf-cta",
+        "templateId": "button-shop-vip",
+        "category": "buttons",
+        "name": "Unlock VIP Portal",
+        "backgroundColor": "#18181b",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 420,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-bf-btn", "type": "button", "content": "Enter VIP Early Access Vault →", "fontSize": 16, "url": "https://example.com/vip-portal", "x": 160, "y": 25, "width": 280, "height": 52 }
+        ]
+      },
+      {
+        "id": "sec-bf-footer",
+        "templateId": "footer-vip",
+        "category": "footer",
+        "name": "VIP Exclusivity Footer",
+        "backgroundColor": "#09090b",
+        "padding": "24px",
+        "x": 0,
+        "y": 540,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-bf-fmsg", "type": "text", "content": "This link is personalized for VIP member #904812. Do not forward.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-bf-flnks", "type": "link", "content": "VIP Rewards Terms  |  Return Policy  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/vip-terms", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "minimal-watch-catalog",
+    "name": "The Winter Collection - Curated Goods",
+    "category": "ecommerce",
+    "description": "E-commerce product lookbook featuring two-column product cards, pricing badges, crisp imagery, and direct shopping links.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-wc-header",
+        "templateId": "header-catalog",
+        "category": "header",
+        "name": "Lookbook Header",
+        "backgroundColor": "#ffffff",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 200,
+        "nodes": [
+          { "id": "n-wc-brand", "type": "logo", "content": "CHRONO & CO.", "fontSize": 18, "x": 24, "y": 20, "width": 552, "height": 30 },
+          { "id": "n-wc-h1", "type": "heading", "content": "The Winter 2026 Collection", "fontSize": 28, "x": 24, "y": 60, "width": 552, "height": 45 },
+          { "id": "n-wc-sub", "type": "text", "content": "Minimalist mechanical timepieces crafted from sapphire crystal and brushed surgical steel.", "fontSize": 14, "x": 24, "y": 115, "width": 552, "height": 40 }
+        ]
+      },
+      {
+        "id": "sec-wc-items",
+        "templateId": "highlight-products",
+        "category": "highlights",
+        "name": "Featured Timepieces",
+        "backgroundColor": "#f8fafc",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 200,
+        "width": 600,
+        "height": 240,
+        "nodes": [
+          { "id": "n-wc-ih", "type": "heading", "content": "Featured Horology Highlights", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 30 },
+          { "id": "n-wc-p1", "type": "text", "content": "• Chrono Automatic 38mm (Obsidian Black) — $540  [In Stock]", "fontSize": 14, "x": 24, "y": 55, "width": 552, "height": 30 },
+          { "id": "n-wc-p2", "type": "text", "content": "• Heritage Chronograph 40mm (Silver Sunburst) — $680  [Limited to 250 units]", "fontSize": 14, "x": 24, "y": 95, "width": 552, "height": 30 },
+          { "id": "n-wc-p3", "type": "text", "content": "• Field Edition Titanium 36mm (Field Olive) — $420  [New Release]", "fontSize": 14, "x": 24, "y": 135, "width": 552, "height": 30 }
+        ]
+      },
+      {
+        "id": "sec-wc-cta",
+        "templateId": "button-lookbook",
+        "category": "buttons",
+        "name": "Shop Collection CTA",
+        "backgroundColor": "#ffffff",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 440,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-wc-btn", "type": "button", "content": "Explore Full Lookbook →", "fontSize": 15, "url": "https://example.com/lookbook", "x": 180, "y": 25, "width": 240, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-wc-footer",
+        "templateId": "footer-ecommerce",
+        "category": "footer",
+        "name": "E-Commerce Guarantees Footer",
+        "backgroundColor": "#f1f5f9",
+        "padding": "24px",
+        "x": 0,
+        "y": 560,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-wc-fgrt", "type": "text", "content": "Complimentary Worldwide Express Shipping • 5-Year International Warranty • 30-Day Returns", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-wc-flnk", "type": "link", "content": "Customer Care  |  Track Shipment  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/care", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "platform-v2-changelog",
+    "name": "What's New in Version 3.0 - Performance & AI",
+    "category": "update",
+    "description": "Product changelog and feature release update detailing speed enhancements, AI workflows, and release notes documentation.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-cl-header",
+        "templateId": "header-changelog",
+        "category": "header",
+        "name": "Changelog Header",
+        "backgroundColor": "#0284c7",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 210,
+        "nodes": [
+          { "id": "n-cl-tag", "type": "logo", "content": "PRODUCT UPDATE • VERSION 3.0", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-cl-h1", "type": "heading", "content": "Blazing Speed & Smarter Design Tools", "fontSize": 28, "x": 24, "y": 56, "width": 552, "height": 52 },
+          { "id": "n-cl-sub", "type": "text", "content": "Version 3.0 brings 4x faster canvas rendering, instant template search, and AI copy generation.", "fontSize": 15, "x": 24, "y": 120, "width": 552, "height": 42 }
+        ]
+      },
+      {
+        "id": "sec-cl-notes",
+        "templateId": "highlight-release-notes",
+        "category": "highlights",
+        "name": "Highlights Changelog",
+        "backgroundColor": "#ffffff",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 210,
+        "width": 600,
+        "height": 230,
+        "nodes": [
+          { "id": "n-cl-nh", "type": "heading", "content": "Key Release Notes", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 30 },
+          { "id": "n-cl-rn1", "type": "text", "content": "⚡ High Performance Rendering: Zero lag when moving or editing complex multi-column layouts.", "fontSize": 14, "x": 24, "y": 55, "width": 552, "height": 32 },
+          { "id": "n-cl-rn2", "type": "text", "content": "🔍 Universal Backend Search: Instantly filter email templates across all 12 categories.", "fontSize": 14, "x": 24, "y": 95, "width": 552, "height": 32 },
+          { "id": "n-cl-rn3", "type": "text", "content": "🛡️ Asset Protection: Prevent accidental deletion of images actively referenced in campaigns.", "fontSize": 14, "x": 24, "y": 135, "width": 552, "height": 32 }
+        ]
+      },
+      {
+        "id": "sec-cl-cta",
+        "templateId": "button-changelog",
+        "category": "buttons",
+        "name": "Try V3 Button",
+        "backgroundColor": "#f0f9ff",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 440,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-cl-btn", "type": "button", "content": "Try Version 3.0 in Your Editor →", "fontSize": 15, "url": "https://example.com/v3", "x": 165, "y": 25, "width": 270, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-cl-footer",
+        "templateId": "footer-changelog",
+        "category": "footer",
+        "name": "Changelog Footer",
+        "backgroundColor": "#ffffff",
+        "padding": "24px",
+        "x": 0,
+        "y": 560,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-cl-fgh", "type": "text", "content": "Want to review the full developer diff? Check out our GitHub release tags.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-cl-flnk", "type": "link", "content": "API Documentation  |  GitHub Releases  |  Notification Settings", "fontSize": 12, "url": "https://example.com/docs", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "holiday-gift-guide",
+    "name": "Holiday Gift Guide - Thoughtful Presents for Everyone",
+    "category": "seasonal",
+    "description": "Warm seasonal curation with gift categories by recipient, price filter badges, festive header graphics, and shipping cut-off notices.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1513297887119-d46091b24bfa?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-hg-header",
+        "templateId": "header-holiday",
+        "category": "header",
+        "name": "Festive Header",
+        "backgroundColor": "#064e3b",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 210,
+        "nodes": [
+          { "id": "n-hg-tag", "type": "logo", "content": "THE 2026 CURATION", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-hg-h1", "type": "heading", "content": "The 2026 Holiday Gift Guide", "fontSize": 30, "x": 24, "y": 56, "width": 552, "height": 52 },
+          { "id": "n-hg-sub", "type": "text", "content": "Handcrafted, enduring gifts for the designers, creators, and tinkerers in your life.", "fontSize": 15, "x": 24, "y": 120, "width": 552, "height": 42 }
+        ]
+      },
+      {
+        "id": "sec-hg-categories",
+        "templateId": "highlight-gift-categories",
+        "category": "highlights",
+        "name": "Gift Categories",
+        "backgroundColor": "#ffffff",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 210,
+        "width": 600,
+        "height": 230,
+        "nodes": [
+          { "id": "n-hg-gh", "type": "heading", "content": "Browse Curated Collections", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 30 },
+          { "id": "n-hg-c1", "type": "text", "content": "🎁 Gifts Under $50 — Leather desk accessories, artisan keycaps, premium sketchbooks.", "fontSize": 14, "x": 24, "y": 55, "width": 552, "height": 32 },
+          { "id": "n-hg-c2", "type": "text", "content": "🎁 Gifts Under $150 — Wireless charging docks, mechanical keyboards, studio lighting.", "fontSize": 14, "x": 24, "y": 95, "width": 552, "height": 32 },
+          { "id": "n-hg-c3", "type": "text", "content": "🎁 The Splurge List — Ergonomic task chairs, 4K color-accurate displays, espresso machines.", "fontSize": 14, "x": 24, "y": 135, "width": 552, "height": 32 }
+        ]
+      },
+      {
+        "id": "sec-hg-cta",
+        "templateId": "button-gift-guide",
+        "category": "buttons",
+        "name": "Explore Guide CTA",
+        "backgroundColor": "#fef2f2",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 440,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-hg-btn", "type": "button", "content": "Explore The Complete Gift Guide →", "fontSize": 15, "url": "https://example.com/holiday-guide", "x": 150, "y": 25, "width": 300, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-hg-footer",
+        "templateId": "footer-holiday",
+        "category": "footer",
+        "name": "Holiday Shipping Notice Footer",
+        "backgroundColor": "#ffffff",
+        "padding": "24px",
+        "x": 0,
+        "y": 560,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-hg-fdead", "type": "text", "content": "🎄 Order by Dec 18 for guaranteed standard delivery before Dec 24.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-hg-flnk", "type": "link", "content": "Holiday Shipping FAQ  |  Gift Cards  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/holiday-shipping", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "order-receipt-pro",
+    "name": "Order Confirmed - Receipt #TB-9281",
+    "category": "transactional",
+    "description": "Pixel-perfect transactional receipt featuring order summary table, tax breakdown, shipping address, and tracking button.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1556742049-0a67e557224d?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-rc-header",
+        "templateId": "header-receipt",
+        "category": "header",
+        "name": "Receipt Header",
+        "backgroundColor": "#ffffff",
+        "padding": "36px 24px 20px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 190,
+        "nodes": [
+          { "id": "n-rc-brand", "type": "logo", "content": "STOREFRONT DIRECT", "fontSize": 18, "x": 24, "y": 20, "width": 552, "height": 30 },
+          { "id": "n-rc-h1", "type": "heading", "content": "Thank you for your order!", "fontSize": 28, "x": 24, "y": 58, "width": 552, "height": 48 },
+          { "id": "n-rc-sub", "type": "text", "content": "Order #TB-9281 • Placed on November 23, 2026 • Payment: VISA ending in 4242", "fontSize": 13, "x": 24, "y": 115, "width": 552, "height": 30 }
+        ]
+      },
+      {
+        "id": "sec-rc-items",
+        "templateId": "highlight-receipt-items",
+        "category": "highlights",
+        "name": "Order Items Breakdown",
+        "backgroundColor": "#f8fafc",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 190,
+        "width": 600,
+        "height": 230,
+        "nodes": [
+          { "id": "n-rc-ih", "type": "heading", "content": "Items in this shipment", "fontSize": 17, "x": 24, "y": 16, "width": 552, "height": 28 },
+          { "id": "n-rc-i1", "type": "text", "content": "1x ThemeBuilder Pro Annual Subscription — $199.00", "fontSize": 14, "x": 24, "y": 52, "width": 552, "height": 28 },
+          { "id": "n-rc-i2", "type": "text", "content": "1x Premium Email Component Bundle — $49.00", "fontSize": 14, "x": 24, "y": 86, "width": 552, "height": 28 },
+          { "id": "n-rc-tax", "type": "text", "content": "Subtotal: $248.00  |  Tax (8.25%): $20.46  |  Total Paid: $268.46", "fontSize": 14, "x": 24, "y": 128, "width": 552, "height": 30 }
+        ]
+      },
+      {
+        "id": "sec-rc-cta",
+        "templateId": "button-track",
+        "category": "buttons",
+        "name": "Track Order Button",
+        "backgroundColor": "#ffffff",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 420,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-rc-btn", "type": "button", "content": "View Invoice & Manage Order →", "fontSize": 15, "url": "https://example.com/receipt/TB-9281", "x": 165, "y": 25, "width": 270, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-rc-footer",
+        "templateId": "footer-receipt",
+        "category": "footer",
+        "name": "Billing Support Footer",
+        "backgroundColor": "#f1f5f9",
+        "padding": "24px",
+        "x": 0,
+        "y": 540,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-rc-fhelp", "type": "text", "content": "Questions about this invoice? Reply directly to this email or visit our help center.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-rc-flnk", "type": "link", "content": "Download PDF Receipt  |  Help Center  |  Terms of Sale", "fontSize": 12, "url": "https://example.com/pdf/TB-9281", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  },
+  {
+    "templateKey": "saas-growth-case-study",
+    "name": "How Acme Corp Scaled Email ROI by 340%",
+    "category": "marketing",
+    "description": "B2B marketing case study with client testimonial, measurable metric stat callouts, strategy breakdown, and consultation CTA.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80",
+    "sectionsData": [
+      {
+        "id": "sec-cs-header",
+        "templateId": "header-case-study",
+        "category": "header",
+        "name": "Case Study Header",
+        "backgroundColor": "#1e1b4b",
+        "padding": "36px 24px",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 220,
+        "nodes": [
+          { "id": "n-cs-tag", "type": "logo", "content": "CUSTOMER SUCCESS STORY", "fontSize": 13, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-cs-h1", "type": "heading", "content": "How Acme Corp Scaled Email ROI by 340%", "fontSize": 28, "x": 24, "y": 56, "width": 552, "height": 52 },
+          { "id": "n-cs-sub", "type": "text", "content": "By switching to reusable component-driven email design, Acme cut production cycles from 3 days to 45 minutes.", "fontSize": 14, "x": 24, "y": 120, "width": 552, "height": 42 }
+        ]
+      },
+      {
+        "id": "sec-cs-metrics",
+        "templateId": "highlight-metrics",
+        "category": "highlights",
+        "name": "Key Impact Metrics",
+        "backgroundColor": "#ffffff",
+        "padding": "32px 24px",
+        "x": 0,
+        "y": 220,
+        "width": 600,
+        "height": 220,
+        "nodes": [
+          { "id": "n-cs-mh", "type": "heading", "content": "Results in 90 Days", "fontSize": 18, "x": 24, "y": 16, "width": 552, "height": 30 },
+          { "id": "n-cs-m1", "type": "text", "content": "📈 +340% increase in campaign click-through conversions", "fontSize": 14, "x": 24, "y": 55, "width": 552, "height": 30 },
+          { "id": "n-cs-m2", "type": "text", "content": "⏱️ 85% reduction in cross-client rendering QA bottlenecks", "fontSize": 14, "x": 24, "y": 92, "width": 552, "height": 30 },
+          { "id": "n-cs-quote", "type": "text", "content": "“ThemeBuilder gave our growth team super powers.” — Sarah Jenkins, VP Marketing", "fontSize": 14, "x": 24, "y": 130, "width": 552, "height": 35 }
+        ]
+      },
+      {
+        "id": "sec-cs-cta",
+        "templateId": "button-case-study",
+        "category": "buttons",
+        "name": "Book Growth Demo CTA",
+        "backgroundColor": "#f8fafc",
+        "padding": "28px 24px",
+        "x": 0,
+        "y": 440,
+        "width": 600,
+        "height": 120,
+        "nodes": [
+          { "id": "n-cs-btn", "type": "button", "content": "Book a 15-Min Strategy Session →", "fontSize": 15, "url": "https://example.com/demo", "x": 160, "y": 25, "width": 280, "height": 50 }
+        ]
+      },
+      {
+        "id": "sec-cs-footer",
+        "templateId": "footer-case-study",
+        "category": "footer",
+        "name": "Marketing Insights Footer",
+        "backgroundColor": "#ffffff",
+        "padding": "24px",
+        "x": 0,
+        "y": 560,
+        "width": 600,
+        "height": 130,
+        "nodes": [
+          { "id": "n-cs-fnot", "type": "text", "content": "Published by ThemeBuilder Research & Enterprise Case Studies.", "fontSize": 12, "x": 24, "y": 20, "width": 552, "height": 26 },
+          { "id": "n-cs-flnk", "type": "link", "content": "Read More Case Studies  |  Privacy Policy  |  Unsubscribe", "fontSize": 12, "url": "https://example.com/cases", "x": 24, "y": 55, "width": 552, "height": 26 }
+        ]
+      }
+    ]
+  }
+]
