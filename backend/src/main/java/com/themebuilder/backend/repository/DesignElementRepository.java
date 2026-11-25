@@ -4,4 +4,6 @@ import com.themebuilder.backend.entity.DesignElement;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DesignElementRepository extends JpaRepository<DesignElement, Long> {
+
+    boolean existsBySrcContaining(String srcPart);
 }

@@ -4,6 +4,8 @@ package com.themebuilder.backend.service;
 import com.themebuilder.backend.entity.EditorAsset;
 import com.themebuilder.backend.repository.EditorAssetRepository;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -35,6 +37,7 @@ public class EditorAssetService {
 
     // 1. Fetch active assets by type.
     // Existing method preserved for backward compatibility.
+    @Cacheable(value = "editorAssetsByType", key = "#assetType")
     @Transactional(readOnly = true)
     public List<EditorAsset> getAssetsByType(String assetType) {
 
@@ -48,6 +51,7 @@ public class EditorAssetService {
 
     // 2. Fetch all active assets.
     // Existing method preserved.
+    @Cacheable(value = "allActiveAssets")
     @Transactional(readOnly = true)
     public List<EditorAsset> getAllActiveAssets() {
 
@@ -66,6 +70,13 @@ public class EditorAssetService {
         return getAssetsByTypePaginated(assetType, page, size, category, null);
     }
 
+    @Cacheable(
+            value = "editorAssetPages",
+            key = "(#assetType != null ? #assetType : 'all') + '-' + " +
+                  "(#category != null ? #category : 'all') + '-' + " +
+                  "(#search != null ? #search : '') + '-' + " +
+                  "#page + '-' + #size"
+    )
     @Transactional(readOnly = true)
     public Page<EditorAsset> getAssetsByTypePaginated(
             String assetType,
@@ -101,6 +112,54 @@ public class EditorAssetService {
                 ? search.trim()
                 : null;
 
+        // Intent-aware category/type mapping when assetType is not already locked
+        if (trimmedSearch != null) {
+            String term = trimmedSearch.toLowerCase(Locale.ROOT);
+
+            if (normalizedType == null) {
+                if ("border".equals(term) || "borders".equals(term)) {
+                    normalizedType = "BORDER";
+                    trimmedCategory = null;
+                    trimmedSearch = null;
+                } else if (term.startsWith("border ") || term.endsWith(" border") || term.endsWith(" borders")) {
+                    normalizedType = "BORDER";
+                    trimmedCategory = null;
+                    trimmedSearch = term.replaceAll("\\bborders?\\b", "").trim();
+                    if (trimmedSearch.isBlank()) {
+                        trimmedSearch = null;
+                    }
+                } else if ("animation".equals(term) || "animations".equals(term) || "page animation".equals(term) || "page animations".equals(term)) {
+                    normalizedType = "ANIMATION";
+                    trimmedCategory = null;
+                    trimmedSearch = null;
+                } else if ("animated design".equals(term) || "animated designs".equals(term) || "animated graphic".equals(term) || "animated graphics".equals(term)) {
+                    normalizedType = "GRAPHIC";
+                    trimmedCategory = null;
+                    trimmedSearch = "Animations";
+                } else if ("emoji".equals(term) || "emojis".equals(term)) {
+                    normalizedType = "EMOJI";
+                    trimmedCategory = null;
+                    trimmedSearch = null;
+                } else if ("animal".equals(term) || "animals".equals(term) || "animal graphic".equals(term) || "animal graphics".equals(term) || "animals graphics".equals(term)) {
+                    normalizedType = "GRAPHIC";
+                    trimmedCategory = "Handdrawn Animals";
+                    trimmedSearch = null;
+                } else if ("bird".equals(term) || "birds".equals(term) || "bird graphic".equals(term) || "bird graphics".equals(term) || "birds graphics".equals(term)) {
+                    normalizedType = "GRAPHIC";
+                    trimmedCategory = "Birds";
+                    trimmedSearch = null;
+                } else if ("shape".equals(term) || "shapes".equals(term)) {
+                    normalizedType = "SHAPE";
+                    trimmedCategory = null;
+                    trimmedSearch = null;
+                } else if ("photo".equals(term) || "photos".equals(term) || "picture".equals(term) || "pictures".equals(term) || "image".equals(term) || "images".equals(term)) {
+                    normalizedType = "PHOTO";
+                    trimmedCategory = null;
+                    trimmedSearch = null;
+                }
+            }
+        }
+
         // Backend database search across name, key, category, and JSON assetData tags/keywords
         if (trimmedSearch != null) {
             return editorAssetRepository.searchAssetsNative(
@@ -122,14 +181,28 @@ public class EditorAssetService {
         }
 
         // Without category filter or search
-        return editorAssetRepository
-                .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc(
-                        normalizedType,
-                        pageable
-                );
+        if (normalizedType != null) {
+            return editorAssetRepository
+                    .findByAssetTypeAndIsActiveTrueOrderBySortOrderAscIdAsc(
+                            normalizedType,
+                            pageable
+                    );
+        }
+
+        // Global search without filter
+        return editorAssetRepository.searchAssetsNative(
+                null,
+                null,
+                null,
+                pageable
+        );
     }
 
     // 4. Add a new asset.
+    @CacheEvict(
+            value = {"graphicCategories", "graphicRecommended", "graphicPages", "editorAssetPages", "editorAssetsByType", "allActiveAssets"},
+            allEntries = true
+    )
     @Transactional
     public EditorAsset addAsset(EditorAsset asset) {
 
@@ -160,6 +233,10 @@ public class EditorAssetService {
     }
 
     // 5. Update an existing asset.
+    @CacheEvict(
+            value = {"graphicCategories", "graphicRecommended", "graphicPages", "editorAssetPages", "editorAssetsByType", "allActiveAssets"},
+            allEntries = true
+    )
     @Transactional
     public EditorAsset updateAsset(Long id, EditorAsset updatedAsset) {
 
@@ -200,6 +277,10 @@ public class EditorAssetService {
     }
 
     // 6. Deactivate an asset instead of permanently deleting it.
+    @CacheEvict(
+            value = {"graphicCategories", "graphicRecommended", "graphicPages", "editorAssetPages", "editorAssetsByType", "allActiveAssets"},
+            allEntries = true
+    )
     @Transactional
     public EditorAsset deactivateAsset(Long id) {
 
@@ -216,6 +297,10 @@ public class EditorAssetService {
     }
 
     // 7. Activate an existing asset again.
+    @CacheEvict(
+            value = {"graphicCategories", "graphicRecommended", "graphicPages", "editorAssetPages", "editorAssetsByType", "allActiveAssets"},
+            allEntries = true
+    )
     @Transactional
     public EditorAsset activateAsset(Long id) {
 

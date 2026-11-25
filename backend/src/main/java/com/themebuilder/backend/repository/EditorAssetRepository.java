@@ -54,7 +54,7 @@ public interface EditorAssetRepository extends JpaRepository<EditorAsset, Long> 
             String category
     );
 
-    // Database-level search across asset types, categories, names, keys, and asset_data JSON
+    // Database-level search across asset types, categories, names, keys, and asset_data tags/keywords
     @Query(
             value = "SELECT * FROM editor_assets a WHERE a.is_active = true " +
                     "AND (:assetType IS NULL OR :assetType = '' OR UPPER(a.asset_type) = UPPER(:assetType)) " +
@@ -63,7 +63,10 @@ public interface EditorAssetRepository extends JpaRepository<EditorAsset, Long> 
                     "     OR LOWER(a.name) LIKE LOWER(CONCAT('%', :search, '%')) " +
                     "     OR LOWER(a.asset_key) LIKE LOWER(CONCAT('%', :search, '%')) " +
                     "     OR LOWER(COALESCE(a.category, '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
-                    "     OR LOWER(CAST(a.asset_data AS text)) LIKE LOWER(CONCAT('%', :search, '%'))) " +
+                    "     OR LOWER(COALESCE(CAST(a.asset_data->'tags' AS text), '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
+                    "     OR LOWER(COALESCE(CAST(a.asset_data->'keywords' AS text), '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
+                    "     OR LOWER(COALESCE(a.asset_data->>'description', '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
+                    "     OR LOWER(COALESCE(a.asset_data->>'categoryName', '')) LIKE LOWER(CONCAT('%', :search, '%'))) " +
                     "ORDER BY a.sort_order ASC, a.id ASC",
             countQuery = "SELECT count(*) FROM editor_assets a WHERE a.is_active = true " +
                     "AND (:assetType IS NULL OR :assetType = '' OR UPPER(a.asset_type) = UPPER(:assetType)) " +
@@ -72,7 +75,10 @@ public interface EditorAssetRepository extends JpaRepository<EditorAsset, Long> 
                     "     OR LOWER(a.name) LIKE LOWER(CONCAT('%', :search, '%')) " +
                     "     OR LOWER(a.asset_key) LIKE LOWER(CONCAT('%', :search, '%')) " +
                     "     OR LOWER(COALESCE(a.category, '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
-                    "     OR LOWER(CAST(a.asset_data AS text)) LIKE LOWER(CONCAT('%', :search, '%')))",
+                    "     OR LOWER(COALESCE(CAST(a.asset_data->'tags' AS text), '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
+                    "     OR LOWER(COALESCE(CAST(a.asset_data->'keywords' AS text), '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
+                    "     OR LOWER(COALESCE(a.asset_data->>'description', '')) LIKE LOWER(CONCAT('%', :search, '%')) " +
+                    "     OR LOWER(COALESCE(a.asset_data->>'categoryName', '')) LIKE LOWER(CONCAT('%', :search, '%')))",
             nativeQuery = true
     )
     Page<EditorAsset> searchAssetsNative(
