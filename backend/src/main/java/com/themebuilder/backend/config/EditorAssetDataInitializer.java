@@ -4,6 +4,7 @@ package com.themebuilder.backend.config;
 import com.themebuilder.backend.entity.EditorAsset;
 import com.themebuilder.backend.repository.EditorAssetRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @Component
+@ConditionalOnProperty(name = "app.legacy-asset-init.enabled", havingValue = "true", matchIfMissing = false)
 public class EditorAssetDataInitializer implements CommandLineRunner {
 
     private static final String TEXT_ASSETS_FILE = "assets/text-assets.json";

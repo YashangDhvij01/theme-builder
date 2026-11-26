@@ -4,6 +4,7 @@ import com.themebuilder.backend.entity.EditorAsset;
 import com.themebuilder.backend.repository.EditorAssetRepository;
 import com.themebuilder.backend.service.GraphicService;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -17,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Order(10)
+@ConditionalOnProperty(name = "app.legacy-asset-init.enabled", havingValue = "true", matchIfMissing = false)
 public class GraphicDataInitializer implements CommandLineRunner {
 
     private static final String GRAPHICS_ASSETS_FILE = "assets/graphics-assets.json";

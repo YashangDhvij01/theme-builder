@@ -3,6 +3,7 @@ package com.themebuilder.backend.config;
 import com.themebuilder.backend.entity.Template;
 import com.themebuilder.backend.repository.TemplateRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @Component
+@ConditionalOnProperty(name = "app.legacy-asset-init.enabled", havingValue = "true", matchIfMissing = false)
 public class TemplateDataInitializer implements CommandLineRunner {
 
     private final TemplateRepository templateRepository;
