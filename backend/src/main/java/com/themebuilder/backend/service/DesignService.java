@@ -1,9 +1,11 @@
 
 package com.themebuilder.backend.service;
 
+import com.themebuilder.backend.dto.DesignSummaryDto;
 import com.themebuilder.backend.entity.Design;
 import com.themebuilder.backend.entity.DesignElement;
 import com.themebuilder.backend.repository.DesignRepository;
+import tools.jackson.databind.JsonNode;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -57,47 +59,85 @@ public class DesignService {
     }
 
     @Transactional(readOnly = true)
-    public Page<Design> getDesignsPaginated(int page, int size) {
+    public Page<DesignSummaryDto> getDesignsPaginated(int page, int size) {
 
         if (page < 0) {
             throw new IllegalArgumentException(
-                    "Page number cannot be negative."
-            );
+                    "Page number cannot be negative.");
         }
 
         if (size < 1 || size > 100) {
             throw new IllegalArgumentException(
-                    "Page size must be between 1 and 100."
-            );
+                    "Page size must be between 1 and 100.");
         }
 
         Pageable pageable = PageRequest.of(page, size);
 
         return designRepository
-                .findAllByOrderByUpdatedAtDescIdDesc(pageable);
+                .findDesignSummaryRows(pageable)
+                .map(this::toSummaryDto);
+    }
+
+    private DesignSummaryDto toSummaryDto(Object[] row) {
+        return new DesignSummaryDto(
+                (Long) row[0],
+                (String) row[1],
+                (String) row[2],
+                (String) row[3],
+                (String) row[4],
+                (LocalDateTime) row[5],
+                (LocalDateTime) row[6],
+                extractPreviewElements((JsonNode) row[7])
+        );
+    }
+
+    private List<DesignSummaryDto.PreviewElement> extractPreviewElements(JsonNode pagesNode) {
+        List<DesignSummaryDto.PreviewElement> previews = new ArrayList<>(3);
+        if (pagesNode == null || !pagesNode.isArray() || pagesNode.isEmpty()) {
+            return previews;
+        }
+        JsonNode elementsNode = pagesNode.get(0).get("elements");
+        if (elementsNode == null || !elementsNode.isArray()) {
+            return previews;
+        }
+        for (JsonNode el : elementsNode) {
+            String type = el.path("type").asText("");
+            if (!"heading".equals(type) && !"subheading".equals(type) && !"text".equals(type)) {
+                continue;
+            }
+            previews.add(new DesignSummaryDto.PreviewElement(
+                    el.path("id").asText("preview-" + previews.size()),
+                    type,
+                    el.path("text").asText("Text"),
+                    el.hasNonNull("fontSize") ? el.get("fontSize").asDouble() : 18.0,
+                    el.path("fontFamily").asText("Arial, sans-serif"),
+                    el.path("color").asText("#111827"),
+                    el.path("fontWeight").asText("normal"),
+                    el.path("fontStyle").asText("normal")
+            ));
+            if (previews.size() == 3) {
+                break;
+            }
+        }
+        return previews;
     }
 
     @Transactional(readOnly = true)
     public Design getDesignById(Long id) {
 
-        return designRepository.findById(id)
-                .orElseThrow(() ->
-                        new RuntimeException("Design not found")
-                );
+        return designRepository.findWithElementsById(id)
+                .orElseThrow(() -> new RuntimeException("Design not found"));
     }
 
     @Transactional
     public Design updateDesign(Long id, Design design) {
 
         Design existingDesign = designRepository.findById(id)
-                .orElseThrow(() ->
-                        new RuntimeException("Design not found")
-                );
+                .orElseThrow(() -> new RuntimeException("Design not found"));
 
         existingDesign.setName(design.getName());
         existingDesign.setBackgroundColor(
-                design.getBackgroundColor()
-        );
+                design.getBackgroundColor());
 
         existingDesign.setPageSize(design.getPageSize());
         existingDesign.setOrientation(design.getOrientation());
