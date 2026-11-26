@@ -1,5 +1,6 @@
 package com.themebuilder.backend.controller;
 
+import com.themebuilder.backend.dto.DesignSummaryDto;
 import com.themebuilder.backend.entity.Design;
 import com.themebuilder.backend.service.DesignService;
 
@@ -33,13 +34,12 @@ public class DesignController {
         return designService.getAllDesigns();
     }
 
-    // 3. NEW: Get saved designs with pagination
+    // 3. Get saved design summaries with pagination (fast, no heavy JSONB/N+1)
     // URL: /api/designs/page?page=0&size=20
     @GetMapping("/page")
-    public Page<Design> getPaginatedDesigns(
+    public Page<DesignSummaryDto> getPaginatedDesigns(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "20") int size
-    ) {
+            @RequestParam(defaultValue = "20") int size) {
 
         return designService.getDesignsPaginated(page, size);
     }
@@ -55,8 +55,7 @@ public class DesignController {
     @PutMapping("/{id}")
     public Design updateDesign(
             @PathVariable Long id,
-            @RequestBody Design design
-    ) {
+            @RequestBody Design design) {
 
         return designService.updateDesign(id, design);
     }
