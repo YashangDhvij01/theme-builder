@@ -1,6 +1,7 @@
 
 package com.themebuilder.backend.service;
 
+import com.themebuilder.backend.dto.DesignDetailDto;
 import com.themebuilder.backend.dto.DesignSummaryDto;
 import com.themebuilder.backend.entity.Design;
 import com.themebuilder.backend.entity.DesignElement;
@@ -79,6 +80,7 @@ public class DesignService {
     }
 
     private DesignSummaryDto toSummaryDto(Object[] row) {
+        JsonNode pagesNode = (JsonNode) row[7];
         return new DesignSummaryDto(
                 (Long) row[0],
                 (String) row[1],
@@ -87,8 +89,17 @@ public class DesignService {
                 (String) row[4],
                 (LocalDateTime) row[5],
                 (LocalDateTime) row[6],
-                extractPreviewElements((JsonNode) row[7])
+                extractPreviewElements(pagesNode),
+                extractFirstPageElements(pagesNode)
         );
+    }
+
+    private JsonNode extractFirstPageElements(JsonNode pagesNode) {
+        if (pagesNode == null || !pagesNode.isArray() || pagesNode.isEmpty()) {
+            return null;
+        }
+        JsonNode elementsNode = pagesNode.get(0).get("elements");
+        return (elementsNode != null && elementsNode.isArray()) ? elementsNode : null;
     }
 
     private List<DesignSummaryDto.PreviewElement> extractPreviewElements(JsonNode pagesNode) {
@@ -123,10 +134,27 @@ public class DesignService {
     }
 
     @Transactional(readOnly = true)
-    public Design getDesignById(Long id) {
-
-        return designRepository.findWithElementsById(id)
+    public DesignDetailDto getDesignById(Long id) {
+        Design design = designRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Design not found"));
+
+        JsonNode pages = design.getPages();
+        boolean hasPages = pages != null && pages.isArray() && !pages.isEmpty();
+        List<DesignElement> elements = hasPages
+                ? List.of()
+                : new ArrayList<>(design.getElements());
+
+        return new DesignDetailDto(
+                design.getId(),
+                design.getName(),
+                design.getBackgroundColor(),
+                design.getPageSize(),
+                design.getOrientation(),
+                pages,
+                elements,
+                design.getCreatedAt(),
+                design.getUpdatedAt()
+        );
     }
 
     @Transactional

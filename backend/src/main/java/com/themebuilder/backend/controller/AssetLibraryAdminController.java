@@ -127,6 +127,34 @@ public class AssetLibraryAdminController {
     }
     */
 
+    @PatchMapping("/reorder")
+    public ResponseEntity<?> reorderAssets(
+            @RequestHeader(value = "X-Admin-Key", required = false) String adminKey,
+            @RequestBody Map<String, Object> body
+    ) {
+        if (!isAuthorized(adminKey)) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(Map.of("message", "Invalid or missing X-Admin-Key"));
+        }
+        try {
+            Object rawIds = body.get("orderedIds");
+            if (!(rawIds instanceof List<?> idList) || idList.isEmpty()) {
+                return ResponseEntity.badRequest()
+                        .body(Map.of("message", "orderedIds must be a non-empty list."));
+            }
+            List<Long> orderedIds = idList.stream()
+                    .map(val -> Long.valueOf(String.valueOf(val)))
+                    .toList();
+            int startSortOrder = body.get("startSortOrder") instanceof Number n
+                    ? Math.max(1, n.intValue())
+                    : 1;
+            adminService.reorderAssets(orderedIds, startSortOrder);
+            return ResponseEntity.ok(Map.of("updated", orderedIds.size()));
+        } catch (IllegalArgumentException ex) {
+            return ResponseEntity.badRequest().body(Map.of("message", ex.getMessage()));
+        }
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> updateAsset(
             @RequestHeader(value = "X-Admin-Key", required = false) String adminKey,

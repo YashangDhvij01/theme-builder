@@ -1,5 +1,6 @@
 package com.themebuilder.backend.controller;
 
+import com.themebuilder.backend.dto.DesignDetailDto;
 import com.themebuilder.backend.dto.DesignSummaryDto;
 import com.themebuilder.backend.entity.Design;
 import com.themebuilder.backend.service.DesignService;
@@ -46,7 +47,7 @@ public class DesignController {
 
     // 4. Get a single design by ID
     @GetMapping("/{id}")
-    public Design getDesignById(@PathVariable Long id) {
+    public DesignDetailDto getDesignById(@PathVariable Long id) {
 
         return designService.getDesignById(id);
     }
