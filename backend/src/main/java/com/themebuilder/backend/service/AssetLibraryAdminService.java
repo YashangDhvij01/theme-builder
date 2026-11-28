@@ -202,6 +202,28 @@ public class AssetLibraryAdminService {
     }
     */
 
+    @Transactional
+    public void reorderAssets(List<Long> orderedIds, int startSortOrder) {
+        if (orderedIds == null || orderedIds.isEmpty()) {
+            throw new IllegalArgumentException("orderedIds cannot be empty.");
+        }
+        List<AssetLibrary> assets = assetLibraryRepository.findAllById(orderedIds);
+        Map<Long, AssetLibrary> byId = new HashMap<>(assets.size());
+        for (AssetLibrary asset : assets) {
+            byId.put(asset.getId(), asset);
+        }
+        LocalDateTime now = LocalDateTime.now();
+        int sort = Math.max(1, startSortOrder);
+        for (Long id : orderedIds) {
+            AssetLibrary asset = byId.get(id);
+            if (asset != null) {
+                asset.setSortOrder(sort++);
+                asset.setUpdatedAt(now);
+            }
+        }
+        assetLibraryRepository.saveAll(assets);
+    }
+
     private void validateRequest(AssetLibraryRequest req) {
         if (req == null) {
             throw new IllegalArgumentException("Request body cannot be empty.");

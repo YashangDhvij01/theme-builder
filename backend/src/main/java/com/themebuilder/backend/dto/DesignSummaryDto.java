@@ -1,5 +1,7 @@
 package com.themebuilder.backend.dto;
 
+import tools.jackson.databind.JsonNode;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -11,7 +13,8 @@ public record DesignSummaryDto(
         String orientation,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
-        List<PreviewElement> previewElements
+        List<PreviewElement> previewElements,
+        JsonNode previewPageElements
 ) {
     public record PreviewElement(
             String id,
